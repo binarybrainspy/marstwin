@@ -1,28 +1,25 @@
 # MarsTwin science pipeline
 
-Solo-scoped: **6 dimensions**, hardware-test use case (`uc_thermal_mobility`).
+Solo · **6 dimensions** · hardware-test use case · **null beats fake numbers**.
 
 ## Quick run
 
 ```bash
 # from repo root
-pip install -r science/requirements.txt
 python science/scripts/run_pipeline.py
 ```
 
-Exports JSON into `apps/web/public/data/` for the Vite app.
+Fetches NASA POWER air climatology (cached in `science/cache/`), scores cells, writes `apps/web/public/data/*.json`.
 
-## Current data
+## Rules locked in code
 
-| File | Role |
-|------|------|
-| `profiles/earth_cells.csv` | Coarse demo cells (known analogs + new candidates) |
-| `lib/scoring.py` | Per-dimension similarity + weighted composite |
-| `scripts/run_pipeline.py` | Score → validate → export |
+| Rule | Implementation |
+|------|----------------|
+| Slopes null until 20 m DEM | Empty CSV cols + `compute_slopes_20m.py` scaffold |
+| Lunar mineralogy uncitable | `value: null` + use-case weight `0` |
+| Air↔air thermal | POWER T2M vs MEDA ~60 K at Jezero |
+| PSR ~40 K | Gap report hard limit, not an Earth similarity score |
 
-## Next (when Resources unlock)
+## Next sources
 
-1. Replace CSV placeholders with real SRTM slope, MODIS ΔT, POWER precip, NDVI
-2. Cite Moon/Mars target numbers from official list
-3. Expand grid (arid-land mask) without changing the JSON contracts
-4. Fine-refine top 1–2 non-famous sites
+See `docs/DATA_SOURCES.md` — NDVI/GIBS → DEM slopes → MODIS LST track → EMIT / LOLA / Diviner / HiRISE / Odyssey.
