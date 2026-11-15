@@ -1,0 +1,88 @@
+[
+  {
+    "id": "moon_spole_ref",
+    "body": "moon",
+    "name": "Lunar south-polar reference (ops-adjacent)",
+    "lat": -89.9,
+    "lon": 0.0,
+    "rationale": "Reference fingerprint for thermal extremes and barren, high-slope polar terrain relevant to surface mobility rehearsal — not a claim that Earth can match vacuum or PSR illumination.",
+    "features": {
+      "slope_roughness": {
+        "value": 12,
+        "unit": "deg",
+        "source": "LRO LOLA literature summary (placeholder — cite Resources)",
+        "notes": "Local slopes near polar massifs; refine with official DEM tomorrow"
+      },
+      "diurnal_temp_range": {
+        "value": 150,
+        "unit": "K",
+        "source": "Diviner (placeholder range — cite Resources)",
+        "notes": "Polar thermal behavior is illumination-driven; Earth ΔT is a partial proxy only"
+      },
+      "precipitation": {
+        "value": 0,
+        "unit": "mm/yr",
+        "source": "N/A (vacuum)",
+        "notes": "Mapped on Earth via aridity / precip ≈ 0"
+      },
+      "vegetation_ndvi": {
+        "value": 0,
+        "unit": "index",
+        "source": "N/A",
+        "notes": "Barren surface target"
+      },
+      "mineralogy": {
+        "value": 0.4,
+        "unit": "proxy 0-1",
+        "source": "Anorthositic/highland affinity proxy (placeholder)",
+        "notes": "Weak proxy until EMIT/CRISM-style matching is available"
+      },
+      "ice_permafrost": {
+        "value": 0.7,
+        "unit": "proxy 0-1",
+        "source": "PSR ice relevance (placeholder)",
+        "notes": "Earth ice ≠ PSR ice; gap report required"
+      }
+    }
+  },
+  {
+    "id": "mars_arid_ref",
+    "body": "mars",
+    "name": "Mars arid mid-latitude reference",
+    "lat": 18.4,
+    "lon": 77.5,
+    "rationale": "Arid, low-vegetation, thermally cycling surface for instrument and mobility checkout analogs — classic rover-relevant thermal/dust context.",
+    "features": {
+      "slope_roughness": {
+        "value": 5,
+        "unit": "deg",
+        "source": "MOLA / site literature (placeholder — cite Resources)"
+      },
+      "diurnal_temp_range": {
+        "value": 80,
+        "unit": "K",
+        "source": "THEMIS / literature (placeholder)"
+      },
+      "precipitation": {
+        "value": 0,
+        "unit": "mm/yr",
+        "source": "N/A (trace vapor only)"
+      },
+      "vegetation_ndvi": {
+        "value": 0,
+        "unit": "index",
+        "source": "N/A"
+      },
+      "mineralogy": {
+        "value": 0.65,
+        "unit": "proxy 0-1",
+        "source": "Basaltic/dusty affinity proxy (placeholder)"
+      },
+      "ice_permafrost": {
+        "value": 0.15,
+        "unit": "proxy 0-1",
+        "source": "Mid-latitude ice relevance low for this arid ref"
+      }
+    }
+  }
+]
