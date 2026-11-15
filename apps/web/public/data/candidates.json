@@ -1,0 +1,190 @@
+[
+  {
+    "siteId": "cell_tharsis_like_proxy",
+    "name": "Puna de Atacama high plateau",
+    "lat": -25.0,
+    "lon": -68.0,
+    "targetIds": [
+      "mars_arid_ref"
+    ],
+    "useCaseId": "uc_thermal_mobility",
+    "transfers": [
+      "High diurnal thermal swing useful for thermal-cycling rehearsal",
+      "Low vegetation / arid surface for mobility and dust-adjacent checkout",
+      "Moderate slopes suitable for traversable test traverses"
+    ],
+    "breaks": [
+      "Earth gravity and atmosphere do not transfer",
+      "Illumination / radiation environment is not planetary",
+      "Mineralogy proxy is coarse \u2014 refine with EMIT where available"
+    ],
+    "tests": [
+      "Instrument thermal soak / diurnal cycle checkout",
+      "Wheel\u2013soil interaction and slope climb on arid regolith analog",
+      "Ops rehearsal: timed EVA/rover shift under thermal stress"
+    ],
+    "scaleNotes": "Coarse cell ~0.5\u00b0. Fine refine: local DEM slope stats + MODIS \u0394T + POWER precip (Day 2).",
+    "fingerprint": [
+      {
+        "key": "slope_roughness",
+        "similarity": 0.9,
+        "earthValue": 7.0,
+        "targetValue": 5.0
+      },
+      {
+        "key": "diurnal_temp_range",
+        "similarity": 0.8333,
+        "earthValue": 60.0,
+        "targetValue": 80.0
+      },
+      {
+        "key": "precipitation",
+        "similarity": 0.94,
+        "earthValue": 30.0,
+        "targetValue": 0.0
+      },
+      {
+        "key": "vegetation_ndvi",
+        "similarity": 0.9,
+        "earthValue": 0.06,
+        "targetValue": 0.0
+      },
+      {
+        "key": "mineralogy",
+        "similarity": 0.9625,
+        "earthValue": 0.68,
+        "targetValue": 0.65
+      },
+      {
+        "key": "ice_permafrost",
+        "similarity": 1.0,
+        "earthValue": 0.15,
+        "targetValue": 0.15
+      }
+    ],
+    "gaps": [
+      {
+        "id": "g_gravity",
+        "category": "gravity",
+        "title": "Gravity mismatch",
+        "detail": "Earth 1 g vs Moon ~1/6 g / Mars ~0.38 g \u2014 loads and sinkage do not scale 1:1.",
+        "severity": "hard_limit"
+      },
+      {
+        "id": "g_atmo",
+        "category": "atmosphere_vacuum",
+        "title": "Atmosphere / vacuum",
+        "detail": "Convective cooling and pressure effects on Earth invalidate vacuum thermal behavior.",
+        "severity": "hard_limit"
+      },
+      {
+        "id": "g_rad",
+        "category": "radiation",
+        "title": "Radiation environment",
+        "detail": "Earth magnetosphere and atmosphere shield radiation; planetary surface dose does not transfer.",
+        "severity": "hard_limit"
+      },
+      {
+        "id": "g_bio",
+        "category": "biosphere",
+        "title": "Biosphere / contamination",
+        "detail": "Earth biology and planetary protection constraints are unique to terrestrial tests.",
+        "severity": "partial"
+      }
+    ]
+  },
+  {
+    "siteId": "cell_namib",
+    "name": "Namib",
+    "lat": -24.0,
+    "lon": 15.0,
+    "targetIds": [
+      "mars_arid_ref"
+    ],
+    "useCaseId": "uc_thermal_mobility",
+    "transfers": [
+      "High diurnal thermal swing useful for thermal-cycling rehearsal",
+      "Low vegetation / arid surface for mobility and dust-adjacent checkout",
+      "Moderate slopes suitable for traversable test traverses"
+    ],
+    "breaks": [
+      "Earth gravity and atmosphere do not transfer",
+      "Illumination / radiation environment is not planetary",
+      "Mineralogy proxy is coarse \u2014 refine with EMIT where available"
+    ],
+    "tests": [
+      "Instrument thermal soak / diurnal cycle checkout",
+      "Wheel\u2013soil interaction and slope climb on arid regolith analog",
+      "Ops rehearsal: timed EVA/rover shift under thermal stress"
+    ],
+    "scaleNotes": "Coarse cell ~0.5\u00b0. Fine refine: local DEM slope stats + MODIS \u0394T + POWER precip (Day 2).",
+    "fingerprint": [
+      {
+        "key": "slope_roughness",
+        "similarity": 0.925,
+        "earthValue": 3.5,
+        "targetValue": 5.0
+      },
+      {
+        "key": "diurnal_temp_range",
+        "similarity": 0.75,
+        "earthValue": 50.0,
+        "targetValue": 80.0
+      },
+      {
+        "key": "precipitation",
+        "similarity": 0.96,
+        "earthValue": 20.0,
+        "targetValue": 0.0
+      },
+      {
+        "key": "vegetation_ndvi",
+        "similarity": 0.8667,
+        "earthValue": 0.08,
+        "targetValue": 0.0
+      },
+      {
+        "key": "mineralogy",
+        "similarity": 0.9625,
+        "earthValue": 0.62,
+        "targetValue": 0.65
+      },
+      {
+        "key": "ice_permafrost",
+        "similarity": 0.8375,
+        "earthValue": 0.02,
+        "targetValue": 0.15
+      }
+    ],
+    "gaps": [
+      {
+        "id": "g_gravity",
+        "category": "gravity",
+        "title": "Gravity mismatch",
+        "detail": "Earth 1 g vs Moon ~1/6 g / Mars ~0.38 g \u2014 loads and sinkage do not scale 1:1.",
+        "severity": "hard_limit"
+      },
+      {
+        "id": "g_atmo",
+        "category": "atmosphere_vacuum",
+        "title": "Atmosphere / vacuum",
+        "detail": "Convective cooling and pressure effects on Earth invalidate vacuum thermal behavior.",
+        "severity": "hard_limit"
+      },
+      {
+        "id": "g_rad",
+        "category": "radiation",
+        "title": "Radiation environment",
+        "detail": "Earth magnetosphere and atmosphere shield radiation; planetary surface dose does not transfer.",
+        "severity": "hard_limit"
+      },
+      {
+        "id": "g_bio",
+        "category": "biosphere",
+        "title": "Biosphere / contamination",
+        "detail": "Earth biology and planetary protection constraints are unique to terrestrial tests.",
+        "severity": "partial"
+      }
+    ]
+  }
+]

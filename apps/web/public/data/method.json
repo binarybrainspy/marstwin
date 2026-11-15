@@ -1,0 +1,54 @@
+{
+  "coarseResolutionDeg": 0.5,
+  "fineResolutionM": null,
+  "dimensions": [
+    {
+      "key": "slope_roughness",
+      "earthSource": "SRTM/ASTER-derived slope (fixture CSV for now)",
+      "targetSource": "LOLA / MOLA literature placeholders",
+      "transform": "similarity = 1 - clip(|e-t|/20\u00b0, 0, 1)"
+    },
+    {
+      "key": "diurnal_temp_range",
+      "earthSource": "MODIS / POWER-style \u0394T (fixture)",
+      "targetSource": "Diviner / THEMIS placeholders",
+      "transform": "similarity = 1 - clip(|e-t|/120 K, 0, 1)"
+    },
+    {
+      "key": "precipitation",
+      "earthSource": "NASA POWER / climate normals (fixture)",
+      "targetSource": "0 for vacuum/arid Mars ref",
+      "transform": "similarity = 1 - clip(|e-t|/500 mm, 0, 1)"
+    },
+    {
+      "key": "vegetation_ndvi",
+      "earthSource": "NDVI (fixture)",
+      "targetSource": "0 barren target",
+      "transform": "similarity = 1 - clip(|e-t|/0.6, 0, 1)"
+    },
+    {
+      "key": "mineralogy",
+      "earthSource": "Proxy 0-1 (EMIT later)",
+      "targetSource": "Composition affinity proxy",
+      "transform": "similarity = 1 - clip(|e-t|/0.8, 0, 1)"
+    },
+    {
+      "key": "ice_permafrost",
+      "earthSource": "Proxy 0-1 (fixture)",
+      "targetSource": "Ice relevance proxy",
+      "transform": "similarity = 1 - clip(|e-t|/0.8, 0, 1)"
+    }
+  ],
+  "exclusions": [
+    "Atacama Desert",
+    "McMurdo Dry Valleys",
+    "Iceland volcanic terrains",
+    "Hawai\u02bbi volcanic fields"
+  ],
+  "limitations": [
+    "Fixture cell set is tiny \u2014 replace with coarse global/arid-mask grid when Resources unlock",
+    "Target feature values need official citations from challenge Resources",
+    "Mineralogy and ice are proxies until EMIT / neutron products are wired",
+    "Composite score is secondary; per-dimension fingerprint is primary"
+  ]
+}
