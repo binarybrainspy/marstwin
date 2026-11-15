@@ -8,7 +8,7 @@ import { FingerprintChart } from '../fingerprint/FingerprintChart'
 export function ScreenPage() {
   const { usecase, targets, coarse, candidates } = useAppData()
   const [params, setParams] = useSearchParams()
-  const targetId = params.get('target') ?? 'mars_arid_ref'
+  const targetId = params.get('target') ?? 'mars_jezero_ref'
   const cellId = params.get('cell')
   const [viewState, setViewState] = useState({
     longitude: 20,

@@ -2,20 +2,22 @@
   {
     "id": "uc_thermal_mobility",
     "title": "Thermal cycling + mobility rehearsal",
-    "summary": "Find arid, low-vegetation terrain with high diurnal ΔT and traversable slopes for rover thermal and wheel/surface checkout under Earth gravity — then document what does not transfer to Moon/Mars.",
+    "summary": "Find arid, low-vegetation terrain with high diurnal air ΔT and traversable slopes for rover thermal and wheel/surface checkout under Earth gravity — then document what does not transfer to Moon/Mars.",
     "body": "both",
     "weights": {
-      "diurnal_temp_range": 0.28,
-      "slope_roughness": 0.24,
+      "diurnal_temp_range": 0.32,
+      "slope_roughness": 0.28,
       "precipitation": 0.18,
       "vegetation_ndvi": 0.14,
-      "mineralogy": 0.1,
-      "ice_permafrost": 0.06
+      "mineralogy": 0.0,
+      "ice_permafrost": 0.08
     },
     "earthLimitsAlways": [
       "Earth gravity ≠ Moon (1/6 g) or Mars (~0.38 g)",
       "Earth atmosphere and radiation environment do not transfer",
-      "Biosphere and contamination constraints are Earth-unique"
+      "Biosphere and contamination constraints are Earth-unique",
+      "No Earth surface reaches Diviner-class ~40 K PSR cold-trap temperatures",
+      "Temperature comparisons must stay air↔air (POWER T2M vs MEDA) or ground↔ground (MODIS LST vs rover TIRS) — never mix without labeling"
     ]
   }
 ]

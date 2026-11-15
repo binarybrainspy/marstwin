@@ -1,65 +1,66 @@
 [
   {
-    "siteId": "cell_tharsis_like_proxy",
-    "name": "Puna de Atacama high plateau",
-    "lat": -25.0,
-    "lon": -68.0,
+    "siteId": "cell_w_desert_egypt",
+    "name": "Western Desert (Egypt)",
+    "lat": 25.5,
+    "lon": 28.5,
     "targetIds": [
-      "mars_arid_ref"
+      "mars_jezero_ref"
     ],
     "useCaseId": "uc_thermal_mobility",
     "transfers": [
-      "High diurnal thermal swing useful for thermal-cycling rehearsal",
       "Low vegetation / arid surface for mobility and dust-adjacent checkout",
-      "Moderate slopes suitable for traversable test traverses"
+      "Air-temperature diurnal swing from NASA POWER for thermal-cycling rehearsal (air\u2194air vs MEDA)",
+      "Slope pending \u2014 will use same 20 m DEM baseline as Jezero USGS + lunar LOLA"
     ],
     "breaks": [
       "Earth gravity and atmosphere do not transfer",
       "Illumination / radiation environment is not planetary",
-      "Mineralogy proxy is coarse \u2014 refine with EMIT where available"
+      "Lunar mineralogy left uncitable \u2014 zero-weighted / null",
+      "Do not treat POWER air \u0394T as MODIS land-surface \u0394T"
     ],
     "tests": [
-      "Instrument thermal soak / diurnal cycle checkout",
-      "Wheel\u2013soil interaction and slope climb on arid regolith analog",
-      "Ops rehearsal: timed EVA/rover shift under thermal stress"
+      "Instrument thermal soak / diurnal cycle checkout (air-side matched)",
+      "Wheel\u2013soil interaction once 20 m slopes are filled",
+      "Ops rehearsal: timed rover shift under thermal stress"
     ],
-    "scaleNotes": "Coarse cell ~0.5\u00b0. Fine refine: local DEM slope stats + MODIS \u0394T + POWER precip (Day 2).",
+    "scaleNotes": "Coarse cell ~0.5\u00b0. Slopes: null until LOLA / USGS Jezero / Earth DEM at 20 m baseline. Thermal: NASA POWER T2M air climatology.",
     "fingerprint": [
       {
         "key": "slope_roughness",
-        "similarity": 0.9,
-        "earthValue": 7.0,
-        "targetValue": 5.0
+        "similarity": null,
+        "earthValue": null,
+        "targetValue": null
       },
       {
         "key": "diurnal_temp_range",
-        "similarity": 0.8333,
-        "earthValue": 60.0,
-        "targetValue": 80.0
+        "similarity": 0.7573,
+        "earthValue": 30.88,
+        "targetValue": 60.0
       },
       {
         "key": "precipitation",
-        "similarity": 0.94,
-        "earthValue": 30.0,
+        "similarity": 1.0,
+        "earthValue": 0.0,
         "targetValue": 0.0
       },
       {
         "key": "vegetation_ndvi",
-        "similarity": 0.9,
-        "earthValue": 0.06,
+        "similarity": 0.9333,
+        "earthValue": 0.04,
         "targetValue": 0.0
       },
       {
         "key": "mineralogy",
-        "similarity": 0.9625,
-        "earthValue": 0.68,
-        "targetValue": 0.65
+        "similarity": null,
+        "earthValue": null,
+        "targetValue": null
       },
       {
         "key": "ice_permafrost",
-        "similarity": 1.0,
-        "earthValue": 0.15,
-        "targetValue": 0.15
+        "similarity": 0.875,
+        "earthValue": 0.0,
+        "targetValue": 0.1
       }
     ],
     "gaps": [
@@ -83,6 +84,13 @@
         "title": "Radiation environment",
         "detail": "Earth magnetosphere and atmosphere shield radiation; planetary surface dose does not transfer.",
         "severity": "hard_limit"
+      },
+      {
+        "id": "g_temp_kind",
+        "category": "other",
+        "title": "Air vs ground temperature",
+        "detail": "Jezero MEDA diurnal amplitude used here is air (~60 K at 1.45 m). Earth POWER uses T2M air \u2014 compare air\u2194air. MODIS LST is ground and must not be mixed unlabeled.",
+        "severity": "partial"
       },
       {
         "id": "g_bio",
@@ -94,66 +102,67 @@
     ]
   },
   {
-    "siteId": "cell_namib",
-    "name": "Namib",
-    "lat": -24.0,
-    "lon": 15.0,
+    "siteId": "cell_atacama_valley",
+    "name": "Atacama (valley floor)",
+    "lat": -22.9,
+    "lon": -68.2,
     "targetIds": [
-      "mars_arid_ref"
+      "mars_jezero_ref"
     ],
     "useCaseId": "uc_thermal_mobility",
     "transfers": [
-      "High diurnal thermal swing useful for thermal-cycling rehearsal",
       "Low vegetation / arid surface for mobility and dust-adjacent checkout",
-      "Moderate slopes suitable for traversable test traverses"
+      "Air-temperature diurnal swing from NASA POWER for thermal-cycling rehearsal (air\u2194air vs MEDA)",
+      "Slope pending \u2014 will use same 20 m DEM baseline as Jezero USGS + lunar LOLA"
     ],
     "breaks": [
       "Earth gravity and atmosphere do not transfer",
       "Illumination / radiation environment is not planetary",
-      "Mineralogy proxy is coarse \u2014 refine with EMIT where available"
+      "Lunar mineralogy left uncitable \u2014 zero-weighted / null",
+      "Do not treat POWER air \u0394T as MODIS land-surface \u0394T"
     ],
     "tests": [
-      "Instrument thermal soak / diurnal cycle checkout",
-      "Wheel\u2013soil interaction and slope climb on arid regolith analog",
-      "Ops rehearsal: timed EVA/rover shift under thermal stress"
+      "Instrument thermal soak / diurnal cycle checkout (air-side matched)",
+      "Wheel\u2013soil interaction once 20 m slopes are filled",
+      "Ops rehearsal: timed rover shift under thermal stress"
     ],
-    "scaleNotes": "Coarse cell ~0.5\u00b0. Fine refine: local DEM slope stats + MODIS \u0394T + POWER precip (Day 2).",
+    "scaleNotes": "Coarse cell ~0.5\u00b0. Slopes: null until LOLA / USGS Jezero / Earth DEM at 20 m baseline. Thermal: NASA POWER T2M air climatology.",
     "fingerprint": [
       {
         "key": "slope_roughness",
-        "similarity": 0.925,
-        "earthValue": 3.5,
-        "targetValue": 5.0
+        "similarity": null,
+        "earthValue": null,
+        "targetValue": null
       },
       {
         "key": "diurnal_temp_range",
-        "similarity": 0.75,
-        "earthValue": 50.0,
-        "targetValue": 80.0
+        "similarity": 0.7588,
+        "earthValue": 31.05,
+        "targetValue": 60.0
       },
       {
         "key": "precipitation",
-        "similarity": 0.96,
-        "earthValue": 20.0,
+        "similarity": 0.9416,
+        "earthValue": 29.2,
         "targetValue": 0.0
       },
       {
         "key": "vegetation_ndvi",
-        "similarity": 0.8667,
-        "earthValue": 0.08,
+        "similarity": 0.9333,
+        "earthValue": 0.04,
         "targetValue": 0.0
       },
       {
         "key": "mineralogy",
-        "similarity": 0.9625,
-        "earthValue": 0.62,
-        "targetValue": 0.65
+        "similarity": null,
+        "earthValue": null,
+        "targetValue": null
       },
       {
         "key": "ice_permafrost",
-        "similarity": 0.8375,
-        "earthValue": 0.02,
-        "targetValue": 0.15
+        "similarity": 0.9375,
+        "earthValue": 0.05,
+        "targetValue": 0.1
       }
     ],
     "gaps": [
@@ -177,6 +186,13 @@
         "title": "Radiation environment",
         "detail": "Earth magnetosphere and atmosphere shield radiation; planetary surface dose does not transfer.",
         "severity": "hard_limit"
+      },
+      {
+        "id": "g_temp_kind",
+        "category": "other",
+        "title": "Air vs ground temperature",
+        "detail": "Jezero MEDA diurnal amplitude used here is air (~60 K at 1.45 m). Earth POWER uses T2M air \u2014 compare air\u2194air. MODIS LST is ground and must not be mixed unlabeled.",
+        "severity": "partial"
       },
       {
         "id": "g_bio",

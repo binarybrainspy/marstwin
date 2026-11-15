@@ -4,7 +4,7 @@ import { useAppData } from '../../app/DataProvider'
 
 export function ValidatePage() {
   const { usecase, targets, coarse, knownAnalogs, candidates } = useAppData()
-  const [targetId, setTargetId] = useState('mars_arid_ref')
+  const [targetId, setTargetId] = useState('mars_jezero_ref')
   const [excludeFamous, setExcludeFamous] = useState(true)
 
   const target = targets.find((t) => t.id === targetId) ?? targets[0]
