@@ -1,0 +1,95 @@
+[
+  {
+    "id": "moon_spole_ref",
+    "body": "moon",
+    "name": "Lunar south-polar ops-adjacent reference (Shackleton rim vicinity)",
+    "lat": -89.9,
+    "lon": 0.0,
+    "rationale": "Hardware-test fingerprint for barren polar terrain and PSR-adjacent ops. Earth cannot match vacuum, illumination geometry, or ~40 K cold traps — those belong in the gap report.",
+    "features": {
+      "slope_roughness": {
+        "value": null,
+        "unit": "deg",
+        "source": "Pending: compute from LRO LOLA polar DEM at 20 m baseline (same baseline as Earth + Jezero)",
+        "notes": "Do not quote ~30° Shackleton wall averages from a garbled PDF table until checked against the paper. Leave null until the DEM script runs."
+      },
+      "diurnal_temp_range": {
+        "value": null,
+        "unit": "K",
+        "source": "Diviner — no single citable diurnal ΔT used yet for this PSR-adjacent ref",
+        "notes": "Polar thermal regime is illumination-driven, not Earth-like day/night. PSR floors reach ~40 K (Diviner cold-trap context; Paige et al., Science 2010). No Earth surface reaches that — hard gap. Prefer surface brightness temperatures when comparing to Earth LST; do not fake a ΔT."
+      },
+      "precipitation": {
+        "value": 0,
+        "unit": "mm/yr",
+        "source": "N/A (vacuum)",
+        "notes": "Earth side uses aridity / precip ≈ 0 as a barren-surface proxy only."
+      },
+      "vegetation_ndvi": {
+        "value": 0,
+        "unit": "index",
+        "source": "N/A",
+        "notes": "Barren surface target."
+      },
+      "mineralogy": {
+        "value": null,
+        "unit": "proxy 0-1",
+        "source": "No citable site mineralogy locked — feature zero-weighted / excluded while null",
+        "notes": "Dropped until a cited highland/anorthositic affinity exists. Scoring already skips null targets."
+      },
+      "ice_permafrost": {
+        "value": 0.9,
+        "unit": "proxy 0-1",
+        "source": "Diviner PSR cold-trap relevance (Paige et al., Science 2010, doi:10.1126/science.1187726)",
+        "notes": "Proxy for ice-stability relevance near PSRs — not a claim that Earth ice equals PSR ice."
+      }
+    }
+  },
+  {
+    "id": "mars_jezero_ref",
+    "body": "mars",
+    "name": "Mars Jezero crater (Perseverance / MEDA)",
+    "lat": 18.44,
+    "lon": 77.45,
+    "rationale": "Concrete rover-site fingerprint for thermal cycling + mobility rehearsal. Landing site of Perseverance; near-surface air temperatures from MEDA.",
+    "features": {
+      "slope_roughness": {
+        "value": null,
+        "unit": "deg",
+        "source": "Pending: compute from USGS Jezero 20 m elevation model at 20 m baseline",
+        "notes": "Same 20 m baseline as lunar polar DEM and Earth DEMs. Leave null until scripted."
+      },
+      "diurnal_temp_range": {
+        "value": 60,
+        "unit": "K",
+        "source": "MEDA air temperature diurnal amplitude ~60 K at 1.45 m (Munguira et al.; Perseverance MEDA)",
+        "sourceUrl": "https://doi.org/10.1029/2024JE008385",
+        "notes": "THIS IS AIR TEMPERATURE. Earth POWER T2M is also air — compare air↔air. Do not mix with MODIS land-surface temperature without labeling. Surface (TIRS) diurnal ranges are larger (surface max/min span can exceed air)."
+      },
+      "precipitation": {
+        "value": 0,
+        "unit": "mm/yr",
+        "source": "N/A (trace vapor only; no rainfall)",
+        "notes": "Earth aridity proxy via NASA POWER PRECTOTCORR."
+      },
+      "vegetation_ndvi": {
+        "value": 0,
+        "unit": "index",
+        "source": "N/A",
+        "notes": "Barren surface target."
+      },
+      "mineralogy": {
+        "value": null,
+        "unit": "proxy 0-1",
+        "source": "Pending CRISM/EMIT-style cite for Jezero unit affinity",
+        "notes": "Null until cited. EMIT on Earth analogs later."
+      },
+      "ice_permafrost": {
+        "value": 0.1,
+        "unit": "proxy 0-1",
+        "source": "Mid-latitude Jezero — not an ice-sheet analog (proxy low)",
+        "notes": "Odyssey neutron products for ice-focused sites later; low weight for this arid/thermal use case."
+      }
+    }
+  }
+]

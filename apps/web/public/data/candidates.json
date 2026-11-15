@@ -9,14 +9,14 @@
     ],
     "useCaseId": "uc_thermal_mobility",
     "transfers": [
-      "Low vegetation / arid surface for mobility and dust-adjacent checkout",
+      "MODIS NDVI 0.090 in a ~2 km sample \u2014 barren-surface rehearsal for mobility and dust-adjacent checkout",
       "Air-temperature diurnal swing from NASA POWER for thermal-cycling rehearsal (air\u2194air vs MEDA)",
-      "Slope pending \u2014 will use same 20 m DEM baseline as Jezero USGS + lunar LOLA"
+      "Slope pending \u2014 same 20 m DEM baseline as Jezero USGS + lunar LOLA (compute_slopes_20m.py)"
     ],
     "breaks": [
       "Earth gravity and atmosphere do not transfer",
       "Illumination / radiation environment is not planetary",
-      "Lunar mineralogy left uncitable \u2014 zero-weighted / null",
+      "Mineralogy zero-weighted until a citable site value exists",
       "Do not treat POWER air \u0394T as MODIS land-surface \u0394T"
     ],
     "tests": [
@@ -24,7 +24,7 @@
       "Wheel\u2013soil interaction once 20 m slopes are filled",
       "Ops rehearsal: timed rover shift under thermal stress"
     ],
-    "scaleNotes": "Coarse cell ~0.5\u00b0. Slopes: null until LOLA / USGS Jezero / Earth DEM at 20 m baseline. Thermal: NASA POWER T2M air climatology.",
+    "scaleNotes": "Coarse cell ~0.5\u00b0. NDVI: MODIS MOD13Q1 250 m annual mean in a ~2 km box. Slopes: null until LOLA / USGS Jezero / Earth DEM at 20 m baseline. Thermal: NASA POWER T2M air climatology.",
     "fingerprint": [
       {
         "key": "slope_roughness",
@@ -46,8 +46,8 @@
       },
       {
         "key": "vegetation_ndvi",
-        "similarity": 0.9333,
-        "earthValue": 0.04,
+        "similarity": 0.8492,
+        "earthValue": 0.0905,
         "targetValue": 0.0
       },
       {
@@ -93,6 +93,13 @@
         "severity": "partial"
       },
       {
+        "id": "g_ndvi_scale",
+        "category": "scale",
+        "title": "Vegetation sample scale",
+        "detail": "NDVI is a MODIS 250 m point sample in a ~2 km box at the cell centre, not a 0.5\u00b0 area mean. Bare cover within the cell can differ from the sample.",
+        "severity": "manageable"
+      },
+      {
         "id": "g_bio",
         "category": "biosphere",
         "title": "Biosphere / contamination",
@@ -102,23 +109,23 @@
     ]
   },
   {
-    "siteId": "cell_atacama_valley",
-    "name": "Atacama (valley floor)",
-    "lat": -22.9,
-    "lon": -68.2,
+    "siteId": "cell_taklamakan",
+    "name": "Taklamakan",
+    "lat": 39.0,
+    "lon": 83.0,
     "targetIds": [
       "mars_jezero_ref"
     ],
     "useCaseId": "uc_thermal_mobility",
     "transfers": [
-      "Low vegetation / arid surface for mobility and dust-adjacent checkout",
+      "MODIS NDVI 0.054 in a ~2 km sample \u2014 barren-surface rehearsal for mobility and dust-adjacent checkout",
       "Air-temperature diurnal swing from NASA POWER for thermal-cycling rehearsal (air\u2194air vs MEDA)",
-      "Slope pending \u2014 will use same 20 m DEM baseline as Jezero USGS + lunar LOLA"
+      "Slope pending \u2014 same 20 m DEM baseline as Jezero USGS + lunar LOLA (compute_slopes_20m.py)"
     ],
     "breaks": [
       "Earth gravity and atmosphere do not transfer",
       "Illumination / radiation environment is not planetary",
-      "Lunar mineralogy left uncitable \u2014 zero-weighted / null",
+      "Mineralogy zero-weighted until a citable site value exists",
       "Do not treat POWER air \u0394T as MODIS land-surface \u0394T"
     ],
     "tests": [
@@ -126,7 +133,7 @@
       "Wheel\u2013soil interaction once 20 m slopes are filled",
       "Ops rehearsal: timed rover shift under thermal stress"
     ],
-    "scaleNotes": "Coarse cell ~0.5\u00b0. Slopes: null until LOLA / USGS Jezero / Earth DEM at 20 m baseline. Thermal: NASA POWER T2M air climatology.",
+    "scaleNotes": "Coarse cell ~0.5\u00b0. NDVI: MODIS MOD13Q1 250 m annual mean in a ~2 km box. Slopes: null until LOLA / USGS Jezero / Earth DEM at 20 m baseline. Thermal: NASA POWER T2M air climatology.",
     "fingerprint": [
       {
         "key": "slope_roughness",
@@ -136,20 +143,20 @@
       },
       {
         "key": "diurnal_temp_range",
-        "similarity": 0.7588,
-        "earthValue": 31.05,
+        "similarity": 0.7724,
+        "earthValue": 32.69,
         "targetValue": 60.0
       },
       {
         "key": "precipitation",
-        "similarity": 0.9416,
-        "earthValue": 29.2,
+        "similarity": 0.8832,
+        "earthValue": 58.4,
         "targetValue": 0.0
       },
       {
         "key": "vegetation_ndvi",
-        "similarity": 0.9333,
-        "earthValue": 0.04,
+        "similarity": 0.9098,
+        "earthValue": 0.0541,
         "targetValue": 0.0
       },
       {
@@ -193,6 +200,13 @@
         "title": "Air vs ground temperature",
         "detail": "Jezero MEDA diurnal amplitude used here is air (~60 K at 1.45 m). Earth POWER uses T2M air \u2014 compare air\u2194air. MODIS LST is ground and must not be mixed unlabeled.",
         "severity": "partial"
+      },
+      {
+        "id": "g_ndvi_scale",
+        "category": "scale",
+        "title": "Vegetation sample scale",
+        "detail": "NDVI is a MODIS 250 m point sample in a ~2 km box at the cell centre, not a 0.5\u00b0 area mean. Bare cover within the cell can differ from the sample.",
+        "severity": "manageable"
       },
       {
         "id": "g_bio",

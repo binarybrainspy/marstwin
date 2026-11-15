@@ -4,7 +4,7 @@
   "dimensions": [
     {
       "key": "slope_roughness",
-      "earthSource": "Pending DEM slope at 20 m baseline (SRTM/Copernicus)",
+      "earthSource": "DEM slope at 20 m baseline (SRTM/Copernicus) via compute_slopes_20m.py; null until computed",
       "targetSource": "LOLA polar DEM + USGS Jezero 20 m \u2014 compute, do not invent",
       "transform": "similarity = 1 - clip(|e-t|/20\u00b0, 0, 1); null until computed"
     },
@@ -22,9 +22,9 @@
     },
     {
       "key": "vegetation_ndvi",
-      "earthSource": "Manual/NDVI stub \u2192 GIBS/MODIS NDVI next",
+      "earthSource": "MODIS MOD13Q1 250 m 16-day NDVI \u2014 annual mean in a ~2 km box around the cell centre (ORNL DAAC subset API)",
       "targetSource": "0 barren target",
-      "transform": "similarity = 1 - clip(|e-t|/0.6, 0, 1)"
+      "transform": "similarity = 1 - clip(|e-t|/0.6, 0, 1); null when the fetch fails"
     },
     {
       "key": "mineralogy",
@@ -50,7 +50,7 @@
     "Moon diurnal \u0394T left null \u2014 PSR ~40 K floor is a gap, not a fake score",
     "Mineralogy zero-weighted until citable",
     "Temperature path is air\u2194air (POWER vs MEDA); MODIS LST is a separate track",
-    "NDVI still stub values \u2014 wire GIBS/MODIS next",
+    "NDVI is a MODIS 250 m point sample (~2 km box), not a 0.5\u00b0 area mean; null when fetch fails",
     "Composite is secondary; fingerprint + gap report are primary"
   ]
 }

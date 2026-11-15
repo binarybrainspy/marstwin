@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ka_atacama",
+    "name": "Atacama Desert",
+    "lat": -23.5,
+    "lon": -69.25,
+    "whyFamous": "Hyper-arid Mars analog; salts, UV, ops heritage",
+    "bodies": ["mars"],
+    "cellId": "cell_atacama"
+  },
+  {
+    "id": "ka_dry_valleys",
+    "name": "McMurdo Dry Valleys",
+    "lat": -77.5,
+    "lon": 162.0,
+    "whyFamous": "Cold desert Mars analog",
+    "bodies": ["mars"],
+    "cellId": "cell_dry_valleys"
+  },
+  {
+    "id": "ka_iceland",
+    "name": "Iceland volcanic terrains",
+    "lat": 64.1,
+    "lon": -19.0,
+    "whyFamous": "Volcanic / basaltic Moon–Mars geology analog",
+    "bodies": ["moon", "mars"],
+    "cellId": "cell_iceland"
+  },
+  {
+    "id": "ka_hawaii",
+    "name": "Hawaiʻi volcanic fields",
+    "lat": 19.7,
+    "lon": -155.5,
+    "whyFamous": "Volcanic ops and regolith-adjacent testing heritage",
+    "bodies": ["moon", "mars"],
+    "cellId": "cell_hawaii"
+  }
+]

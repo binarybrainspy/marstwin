@@ -9,7 +9,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 28.51,
         "precipitation": 11.0,
-        "vegetation_ndvi": 0.05,
+        "vegetation_ndvi": 0.049,
         "mineralogy": null,
         "ice_permafrost": 0.05
       },
@@ -27,7 +27,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 30.39,
         "precipitation": 80.4,
-        "vegetation_ndvi": 0.02,
+        "vegetation_ndvi": null,
         "mineralogy": null,
         "ice_permafrost": 0.85
       },
@@ -45,7 +45,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 24.22,
         "precipitation": 2271.9,
-        "vegetation_ndvi": 0.35,
+        "vegetation_ndvi": 0.0023,
         "mineralogy": null,
         "ice_permafrost": 0.25
       },
@@ -63,7 +63,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 14.72,
         "precipitation": 1815.3,
-        "vegetation_ndvi": 0.45,
+        "vegetation_ndvi": 0.1777,
         "mineralogy": null,
         "ice_permafrost": 0.0
       },
@@ -81,7 +81,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 33.06,
         "precipitation": 54.8,
-        "vegetation_ndvi": 0.08,
+        "vegetation_ndvi": 0.1228,
         "mineralogy": null,
         "ice_permafrost": 0.02
       },
@@ -99,7 +99,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 20.66,
         "precipitation": 449.3,
-        "vegetation_ndvi": 0.04,
+        "vegetation_ndvi": 0.022,
         "mineralogy": null,
         "ice_permafrost": 0.0
       },
@@ -117,7 +117,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 30.73,
         "precipitation": 51.1,
-        "vegetation_ndvi": 0.03,
+        "vegetation_ndvi": 0.0924,
         "mineralogy": null,
         "ice_permafrost": 0.0
       },
@@ -135,7 +135,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 33.88,
         "precipitation": 153.4,
-        "vegetation_ndvi": 0.12,
+        "vegetation_ndvi": 0.2116,
         "mineralogy": null,
         "ice_permafrost": 0.0
       },
@@ -153,7 +153,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 36.4,
         "precipitation": 124.2,
-        "vegetation_ndvi": 0.1,
+        "vegetation_ndvi": 0.0798,
         "mineralogy": null,
         "ice_permafrost": 0.1
       },
@@ -171,7 +171,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 31.98,
         "precipitation": 204.5,
-        "vegetation_ndvi": 0.06,
+        "vegetation_ndvi": 0.0642,
         "mineralogy": null,
         "ice_permafrost": 0.15
       },
@@ -189,7 +189,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 28.18,
         "precipitation": 127.8,
-        "vegetation_ndvi": 0.05,
+        "vegetation_ndvi": 0.0911,
         "mineralogy": null,
         "ice_permafrost": 0.0
       },
@@ -207,7 +207,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 29.26,
         "precipitation": 21.9,
-        "vegetation_ndvi": 0.05,
+        "vegetation_ndvi": 0.1132,
         "mineralogy": null,
         "ice_permafrost": 0.0
       },
@@ -225,7 +225,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 30.88,
         "precipitation": 0.0,
-        "vegetation_ndvi": 0.04,
+        "vegetation_ndvi": 0.0905,
         "mineralogy": null,
         "ice_permafrost": 0.0
       },
@@ -243,7 +243,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 30.36,
         "precipitation": 87.7,
-        "vegetation_ndvi": 0.08,
+        "vegetation_ndvi": 0.0651,
         "mineralogy": null,
         "ice_permafrost": 0.0
       },
@@ -261,7 +261,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 29.39,
         "precipitation": 442.0,
-        "vegetation_ndvi": 0.1,
+        "vegetation_ndvi": 0.1299,
         "mineralogy": null,
         "ice_permafrost": 0.0
       },
@@ -279,7 +279,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 31.05,
         "precipitation": 29.2,
-        "vegetation_ndvi": 0.04,
+        "vegetation_ndvi": 0.1166,
         "mineralogy": null,
         "ice_permafrost": 0.05
       },
@@ -297,7 +297,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 33.98,
         "precipitation": 124.2,
-        "vegetation_ndvi": 0.08,
+        "vegetation_ndvi": 0.1079,
         "mineralogy": null,
         "ice_permafrost": 0.0
       },
@@ -315,7 +315,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 33.85,
         "precipitation": 62.1,
-        "vegetation_ndvi": 0.03,
+        "vegetation_ndvi": 0.0696,
         "mineralogy": null,
         "ice_permafrost": 0.0
       },
@@ -333,7 +333,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 32.69,
         "precipitation": 58.4,
-        "vegetation_ndvi": 0.06,
+        "vegetation_ndvi": 0.0541,
         "mineralogy": null,
         "ice_permafrost": 0.05
       },
@@ -351,7 +351,7 @@
         "slope_roughness": null,
         "diurnal_temp_range": 22.78,
         "precipitation": 142.4,
-        "vegetation_ndvi": 0.07,
+        "vegetation_ndvi": 0.0835,
         "mineralogy": null,
         "ice_permafrost": 0.02
       },
@@ -387,8 +387,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.9667,
-          "earthValue": 0.02,
+          "similarity": null,
+          "earthValue": null,
           "targetValue": 0.0
         },
         {
@@ -404,53 +404,8 @@
           "targetValue": 0.9
         }
       ],
-      "composite": 0.9035,
+      "composite": 0.8694,
       "rank": 1
-    },
-    {
-      "cellId": "cell_w_desert_egypt",
-      "targetId": "moon_spole_ref",
-      "useCaseId": "uc_thermal_mobility",
-      "dimensions": [
-        {
-          "key": "slope_roughness",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "diurnal_temp_range",
-          "similarity": null,
-          "earthValue": 30.88,
-          "targetValue": null
-        },
-        {
-          "key": "precipitation",
-          "similarity": 1.0,
-          "earthValue": 0.0,
-          "targetValue": 0.0
-        },
-        {
-          "key": "vegetation_ndvi",
-          "similarity": 0.9333,
-          "earthValue": 0.04,
-          "targetValue": 0.0
-        },
-        {
-          "key": "mineralogy",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "ice_permafrost",
-          "similarity": 0.0,
-          "earthValue": 0.0,
-          "targetValue": 0.9
-        }
-      ],
-      "composite": 0.7767,
-      "rank": 2
     },
     {
       "cellId": "cell_atacama",
@@ -477,8 +432,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.9167,
-          "earthValue": 0.05,
+          "similarity": 0.9183,
+          "earthValue": 0.049,
           "targetValue": 0.0
         },
         {
@@ -494,8 +449,98 @@
           "targetValue": 0.9
         }
       ],
-      "composite": 0.7609,
+      "composite": 0.7615,
+      "rank": 2
+    },
+    {
+      "cellId": "cell_w_desert_egypt",
+      "targetId": "moon_spole_ref",
+      "useCaseId": "uc_thermal_mobility",
+      "dimensions": [
+        {
+          "key": "slope_roughness",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "diurnal_temp_range",
+          "similarity": null,
+          "earthValue": 30.88,
+          "targetValue": null
+        },
+        {
+          "key": "precipitation",
+          "similarity": 1.0,
+          "earthValue": 0.0,
+          "targetValue": 0.0
+        },
+        {
+          "key": "vegetation_ndvi",
+          "similarity": 0.8492,
+          "earthValue": 0.0905,
+          "targetValue": 0.0
+        },
+        {
+          "key": "mineralogy",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "ice_permafrost",
+          "similarity": 0.0,
+          "earthValue": 0.0,
+          "targetValue": 0.9
+        }
+      ],
+      "composite": 0.7472,
       "rank": 3
+    },
+    {
+      "cellId": "cell_taklamakan",
+      "targetId": "moon_spole_ref",
+      "useCaseId": "uc_thermal_mobility",
+      "dimensions": [
+        {
+          "key": "slope_roughness",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "diurnal_temp_range",
+          "similarity": null,
+          "earthValue": 32.69,
+          "targetValue": null
+        },
+        {
+          "key": "precipitation",
+          "similarity": 0.8832,
+          "earthValue": 58.4,
+          "targetValue": 0.0
+        },
+        {
+          "key": "vegetation_ndvi",
+          "similarity": 0.9098,
+          "earthValue": 0.0541,
+          "targetValue": 0.0
+        },
+        {
+          "key": "mineralogy",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "ice_permafrost",
+          "similarity": 0.0,
+          "earthValue": 0.05,
+          "targetValue": 0.9
+        }
+      ],
+      "composite": 0.7159,
+      "rank": 4
     },
     {
       "cellId": "cell_tibesti",
@@ -522,8 +567,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.9167,
-          "earthValue": 0.05,
+          "similarity": 0.8113,
+          "earthValue": 0.1132,
           "targetValue": 0.0
         },
         {
@@ -539,8 +584,8 @@
           "targetValue": 0.9
         }
       ],
-      "composite": 0.7511,
-      "rank": 4
+      "composite": 0.7143,
+      "rank": 5
     },
     {
       "cellId": "cell_atacama_valley",
@@ -567,8 +612,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.9333,
-          "earthValue": 0.04,
+          "similarity": 0.8057,
+          "earthValue": 0.1166,
           "targetValue": 0.0
         },
         {
@@ -584,52 +629,7 @@
           "targetValue": 0.9
         }
       ],
-      "composite": 0.7504,
-      "rank": 5
-    },
-    {
-      "cellId": "cell_sahara_tanezruft",
-      "targetId": "moon_spole_ref",
-      "useCaseId": "uc_thermal_mobility",
-      "dimensions": [
-        {
-          "key": "slope_roughness",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "diurnal_temp_range",
-          "similarity": null,
-          "earthValue": 30.73,
-          "targetValue": null
-        },
-        {
-          "key": "precipitation",
-          "similarity": 0.8978,
-          "earthValue": 51.1,
-          "targetValue": 0.0
-        },
-        {
-          "key": "vegetation_ndvi",
-          "similarity": 0.95,
-          "earthValue": 0.03,
-          "targetValue": 0.0
-        },
-        {
-          "key": "mineralogy",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "ice_permafrost",
-          "similarity": 0.0,
-          "earthValue": 0.0,
-          "targetValue": 0.9
-        }
-      ],
-      "composite": 0.7365,
+      "composite": 0.7057,
       "rank": 6
     },
     {
@@ -657,8 +657,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.95,
-          "earthValue": 0.03,
+          "similarity": 0.884,
+          "earthValue": 0.0696,
           "targetValue": 0.0
         },
         {
@@ -674,11 +674,11 @@
           "targetValue": 0.9
         }
       ],
-      "composite": 0.7266,
+      "composite": 0.7035,
       "rank": 7
     },
     {
-      "cellId": "cell_taklamakan",
+      "cellId": "cell_sahara_tanezruft",
       "targetId": "moon_spole_ref",
       "useCaseId": "uc_thermal_mobility",
       "dimensions": [
@@ -691,19 +691,19 @@
         {
           "key": "diurnal_temp_range",
           "similarity": null,
-          "earthValue": 32.69,
+          "earthValue": 30.73,
           "targetValue": null
         },
         {
           "key": "precipitation",
-          "similarity": 0.8832,
-          "earthValue": 58.4,
+          "similarity": 0.8978,
+          "earthValue": 51.1,
           "targetValue": 0.0
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.9,
-          "earthValue": 0.06,
+          "similarity": 0.846,
+          "earthValue": 0.0924,
           "targetValue": 0.0
         },
         {
@@ -715,57 +715,12 @@
         {
           "key": "ice_permafrost",
           "similarity": 0.0,
-          "earthValue": 0.05,
+          "earthValue": 0.0,
           "targetValue": 0.9
         }
       ],
-      "composite": 0.7124,
+      "composite": 0.7001,
       "rank": 8
-    },
-    {
-      "cellId": "cell_namib",
-      "targetId": "moon_spole_ref",
-      "useCaseId": "uc_thermal_mobility",
-      "dimensions": [
-        {
-          "key": "slope_roughness",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "diurnal_temp_range",
-          "similarity": null,
-          "earthValue": 33.06,
-          "targetValue": null
-        },
-        {
-          "key": "precipitation",
-          "similarity": 0.8904,
-          "earthValue": 54.8,
-          "targetValue": 0.0
-        },
-        {
-          "key": "vegetation_ndvi",
-          "similarity": 0.8667,
-          "earthValue": 0.08,
-          "targetValue": 0.0
-        },
-        {
-          "key": "mineralogy",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "ice_permafrost",
-          "similarity": 0.0,
-          "earthValue": 0.02,
-          "targetValue": 0.9
-        }
-      ],
-      "composite": 0.704,
-      "rank": 9
     },
     {
       "cellId": "cell_chott_el_jerid",
@@ -792,8 +747,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.8667,
-          "earthValue": 0.08,
+          "similarity": 0.8915,
+          "earthValue": 0.0651,
           "targetValue": 0.0
         },
         {
@@ -809,11 +764,11 @@
           "targetValue": 0.9
         }
       ],
-      "composite": 0.6744,
-      "rank": 10
+      "composite": 0.6831,
+      "rank": 9
     },
     {
-      "cellId": "cell_sahara_ahaggar",
+      "cellId": "cell_namib",
       "targetId": "moon_spole_ref",
       "useCaseId": "uc_thermal_mobility",
       "dimensions": [
@@ -826,109 +781,19 @@
         {
           "key": "diurnal_temp_range",
           "similarity": null,
-          "earthValue": 28.18,
+          "earthValue": 33.06,
           "targetValue": null
         },
         {
           "key": "precipitation",
-          "similarity": 0.7444,
-          "earthValue": 127.8,
+          "similarity": 0.8904,
+          "earthValue": 54.8,
           "targetValue": 0.0
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.9167,
-          "earthValue": 0.05,
-          "targetValue": 0.0
-        },
-        {
-          "key": "mineralogy",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "ice_permafrost",
-          "similarity": 0.0,
-          "earthValue": 0.0,
-          "targetValue": 0.9
-        }
-      ],
-      "composite": 0.6558,
-      "rank": 11
-    },
-    {
-      "cellId": "cell_death_valley",
-      "targetId": "moon_spole_ref",
-      "useCaseId": "uc_thermal_mobility",
-      "dimensions": [
-        {
-          "key": "slope_roughness",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "diurnal_temp_range",
-          "similarity": null,
-          "earthValue": 33.98,
-          "targetValue": null
-        },
-        {
-          "key": "precipitation",
-          "similarity": 0.7516,
-          "earthValue": 124.2,
-          "targetValue": 0.0
-        },
-        {
-          "key": "vegetation_ndvi",
-          "similarity": 0.8667,
-          "earthValue": 0.08,
-          "targetValue": 0.0
-        },
-        {
-          "key": "mineralogy",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "ice_permafrost",
-          "similarity": 0.0,
-          "earthValue": 0.0,
-          "targetValue": 0.9
-        }
-      ],
-      "composite": 0.6416,
-      "rank": 12
-    },
-    {
-      "cellId": "cell_skeleton_coast",
-      "targetId": "moon_spole_ref",
-      "useCaseId": "uc_thermal_mobility",
-      "dimensions": [
-        {
-          "key": "slope_roughness",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "diurnal_temp_range",
-          "similarity": null,
-          "earthValue": 22.78,
-          "targetValue": null
-        },
-        {
-          "key": "precipitation",
-          "similarity": 0.7152,
-          "earthValue": 142.4,
-          "targetValue": 0.0
-        },
-        {
-          "key": "vegetation_ndvi",
-          "similarity": 0.8833,
-          "earthValue": 0.07,
+          "similarity": 0.7953,
+          "earthValue": 0.1228,
           "targetValue": 0.0
         },
         {
@@ -944,8 +809,8 @@
           "targetValue": 0.9
         }
       ],
-      "composite": 0.631,
-      "rank": 13
+      "composite": 0.679,
+      "rank": 10
     },
     {
       "cellId": "cell_gobi",
@@ -972,8 +837,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.8333,
-          "earthValue": 0.1,
+          "similarity": 0.867,
+          "earthValue": 0.0798,
           "targetValue": 0.0
         },
         {
@@ -989,7 +854,142 @@
           "targetValue": 0.9
         }
       ],
-      "composite": 0.6299,
+      "composite": 0.6417,
+      "rank": 11
+    },
+    {
+      "cellId": "cell_sahara_ahaggar",
+      "targetId": "moon_spole_ref",
+      "useCaseId": "uc_thermal_mobility",
+      "dimensions": [
+        {
+          "key": "slope_roughness",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "diurnal_temp_range",
+          "similarity": null,
+          "earthValue": 28.18,
+          "targetValue": null
+        },
+        {
+          "key": "precipitation",
+          "similarity": 0.7444,
+          "earthValue": 127.8,
+          "targetValue": 0.0
+        },
+        {
+          "key": "vegetation_ndvi",
+          "similarity": 0.8482,
+          "earthValue": 0.0911,
+          "targetValue": 0.0
+        },
+        {
+          "key": "mineralogy",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "ice_permafrost",
+          "similarity": 0.0,
+          "earthValue": 0.0,
+          "targetValue": 0.9
+        }
+      ],
+      "composite": 0.6318,
+      "rank": 12
+    },
+    {
+      "cellId": "cell_death_valley",
+      "targetId": "moon_spole_ref",
+      "useCaseId": "uc_thermal_mobility",
+      "dimensions": [
+        {
+          "key": "slope_roughness",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "diurnal_temp_range",
+          "similarity": null,
+          "earthValue": 33.98,
+          "targetValue": null
+        },
+        {
+          "key": "precipitation",
+          "similarity": 0.7516,
+          "earthValue": 124.2,
+          "targetValue": 0.0
+        },
+        {
+          "key": "vegetation_ndvi",
+          "similarity": 0.8202,
+          "earthValue": 0.1079,
+          "targetValue": 0.0
+        },
+        {
+          "key": "mineralogy",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "ice_permafrost",
+          "similarity": 0.0,
+          "earthValue": 0.0,
+          "targetValue": 0.9
+        }
+      ],
+      "composite": 0.6253,
+      "rank": 13
+    },
+    {
+      "cellId": "cell_skeleton_coast",
+      "targetId": "moon_spole_ref",
+      "useCaseId": "uc_thermal_mobility",
+      "dimensions": [
+        {
+          "key": "slope_roughness",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "diurnal_temp_range",
+          "similarity": null,
+          "earthValue": 22.78,
+          "targetValue": null
+        },
+        {
+          "key": "precipitation",
+          "similarity": 0.7152,
+          "earthValue": 142.4,
+          "targetValue": 0.0
+        },
+        {
+          "key": "vegetation_ndvi",
+          "similarity": 0.8608,
+          "earthValue": 0.0835,
+          "targetValue": 0.0
+        },
+        {
+          "key": "mineralogy",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "ice_permafrost",
+          "similarity": 0.0,
+          "earthValue": 0.02,
+          "targetValue": 0.9
+        }
+      ],
+      "composite": 0.6231,
       "rank": 14
     },
     {
@@ -1017,8 +1017,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.9,
-          "earthValue": 0.06,
+          "similarity": 0.893,
+          "earthValue": 0.0642,
           "targetValue": 0.0
         },
         {
@@ -1034,7 +1034,7 @@
           "targetValue": 0.9
         }
       ],
-      "composite": 0.5935,
+      "composite": 0.591,
       "rank": 15
     },
     {
@@ -1062,8 +1062,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.8,
-          "earthValue": 0.12,
+          "similarity": 0.6473,
+          "earthValue": 0.2116,
           "targetValue": 0.0
         },
         {
@@ -1079,98 +1079,8 @@
           "targetValue": 0.9
         }
       ],
-      "composite": 0.5919,
+      "composite": 0.5385,
       "rank": 16
-    },
-    {
-      "cellId": "cell_danakil",
-      "targetId": "moon_spole_ref",
-      "useCaseId": "uc_thermal_mobility",
-      "dimensions": [
-        {
-          "key": "slope_roughness",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "diurnal_temp_range",
-          "similarity": null,
-          "earthValue": 20.66,
-          "targetValue": null
-        },
-        {
-          "key": "precipitation",
-          "similarity": 0.1014,
-          "earthValue": 449.3,
-          "targetValue": 0.0
-        },
-        {
-          "key": "vegetation_ndvi",
-          "similarity": 0.9333,
-          "earthValue": 0.04,
-          "targetValue": 0.0
-        },
-        {
-          "key": "mineralogy",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "ice_permafrost",
-          "similarity": 0.0,
-          "earthValue": 0.0,
-          "targetValue": 0.9
-        }
-      ],
-      "composite": 0.3723,
-      "rank": 17
-    },
-    {
-      "cellId": "cell_makgadikgadi",
-      "targetId": "moon_spole_ref",
-      "useCaseId": "uc_thermal_mobility",
-      "dimensions": [
-        {
-          "key": "slope_roughness",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "diurnal_temp_range",
-          "similarity": null,
-          "earthValue": 29.39,
-          "targetValue": null
-        },
-        {
-          "key": "precipitation",
-          "similarity": 0.116,
-          "earthValue": 442.0,
-          "targetValue": 0.0
-        },
-        {
-          "key": "vegetation_ndvi",
-          "similarity": 0.8333,
-          "earthValue": 0.1,
-          "targetValue": 0.0
-        },
-        {
-          "key": "mineralogy",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "ice_permafrost",
-          "similarity": 0.0,
-          "earthValue": 0.0,
-          "targetValue": 0.9
-        }
-      ],
-      "composite": 0.3439,
-      "rank": 18
     },
     {
       "cellId": "cell_iceland",
@@ -1197,8 +1107,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.4167,
-          "earthValue": 0.35,
+          "similarity": 0.9962,
+          "earthValue": 0.0023,
           "targetValue": 0.0
         },
         {
@@ -1214,7 +1124,97 @@
           "targetValue": 0.9
         }
       ],
-      "composite": 0.1833,
+      "composite": 0.3862,
+      "rank": 17
+    },
+    {
+      "cellId": "cell_danakil",
+      "targetId": "moon_spole_ref",
+      "useCaseId": "uc_thermal_mobility",
+      "dimensions": [
+        {
+          "key": "slope_roughness",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "diurnal_temp_range",
+          "similarity": null,
+          "earthValue": 20.66,
+          "targetValue": null
+        },
+        {
+          "key": "precipitation",
+          "similarity": 0.1014,
+          "earthValue": 449.3,
+          "targetValue": 0.0
+        },
+        {
+          "key": "vegetation_ndvi",
+          "similarity": 0.9633,
+          "earthValue": 0.022,
+          "targetValue": 0.0
+        },
+        {
+          "key": "mineralogy",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "ice_permafrost",
+          "similarity": 0.0,
+          "earthValue": 0.0,
+          "targetValue": 0.9
+        }
+      ],
+      "composite": 0.3828,
+      "rank": 18
+    },
+    {
+      "cellId": "cell_makgadikgadi",
+      "targetId": "moon_spole_ref",
+      "useCaseId": "uc_thermal_mobility",
+      "dimensions": [
+        {
+          "key": "slope_roughness",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "diurnal_temp_range",
+          "similarity": null,
+          "earthValue": 29.39,
+          "targetValue": null
+        },
+        {
+          "key": "precipitation",
+          "similarity": 0.116,
+          "earthValue": 442.0,
+          "targetValue": 0.0
+        },
+        {
+          "key": "vegetation_ndvi",
+          "similarity": 0.7835,
+          "earthValue": 0.1299,
+          "targetValue": 0.0
+        },
+        {
+          "key": "mineralogy",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "ice_permafrost",
+          "similarity": 0.0,
+          "earthValue": 0.0,
+          "targetValue": 0.9
+        }
+      ],
+      "composite": 0.3264,
       "rank": 19
     },
     {
@@ -1242,8 +1242,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.25,
-          "earthValue": 0.45,
+          "similarity": 0.7038,
+          "earthValue": 0.1777,
           "targetValue": 0.0
         },
         {
@@ -1259,98 +1259,8 @@
           "targetValue": 0.9
         }
       ],
-      "composite": 0.0875,
+      "composite": 0.2463,
       "rank": 20
-    },
-    {
-      "cellId": "cell_w_desert_egypt",
-      "targetId": "mars_jezero_ref",
-      "useCaseId": "uc_thermal_mobility",
-      "dimensions": [
-        {
-          "key": "slope_roughness",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "diurnal_temp_range",
-          "similarity": 0.7573,
-          "earthValue": 30.88,
-          "targetValue": 60.0
-        },
-        {
-          "key": "precipitation",
-          "similarity": 1.0,
-          "earthValue": 0.0,
-          "targetValue": 0.0
-        },
-        {
-          "key": "vegetation_ndvi",
-          "similarity": 0.9333,
-          "earthValue": 0.04,
-          "targetValue": 0.0
-        },
-        {
-          "key": "mineralogy",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "ice_permafrost",
-          "similarity": 0.875,
-          "earthValue": 0.0,
-          "targetValue": 0.1
-        }
-      ],
-      "composite": 0.8653,
-      "rank": 1
-    },
-    {
-      "cellId": "cell_atacama_valley",
-      "targetId": "mars_jezero_ref",
-      "useCaseId": "uc_thermal_mobility",
-      "dimensions": [
-        {
-          "key": "slope_roughness",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "diurnal_temp_range",
-          "similarity": 0.7588,
-          "earthValue": 31.05,
-          "targetValue": 60.0
-        },
-        {
-          "key": "precipitation",
-          "similarity": 0.9416,
-          "earthValue": 29.2,
-          "targetValue": 0.0
-        },
-        {
-          "key": "vegetation_ndvi",
-          "similarity": 0.9333,
-          "earthValue": 0.04,
-          "targetValue": 0.0
-        },
-        {
-          "key": "mineralogy",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "ice_permafrost",
-          "similarity": 0.9375,
-          "earthValue": 0.05,
-          "targetValue": 0.1
-        }
-      ],
-      "composite": 0.8583,
-      "rank": 2
     },
     {
       "cellId": "cell_atacama",
@@ -1377,8 +1287,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.9167,
-          "earthValue": 0.05,
+          "similarity": 0.9183,
+          "earthValue": 0.049,
           "targetValue": 0.0
         },
         {
@@ -1394,7 +1304,97 @@
           "targetValue": 0.1
         }
       ],
-      "composite": 0.8547,
+      "composite": 0.855,
+      "rank": 1
+    },
+    {
+      "cellId": "cell_w_desert_egypt",
+      "targetId": "mars_jezero_ref",
+      "useCaseId": "uc_thermal_mobility",
+      "dimensions": [
+        {
+          "key": "slope_roughness",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "diurnal_temp_range",
+          "similarity": 0.7573,
+          "earthValue": 30.88,
+          "targetValue": 60.0
+        },
+        {
+          "key": "precipitation",
+          "similarity": 1.0,
+          "earthValue": 0.0,
+          "targetValue": 0.0
+        },
+        {
+          "key": "vegetation_ndvi",
+          "similarity": 0.8492,
+          "earthValue": 0.0905,
+          "targetValue": 0.0
+        },
+        {
+          "key": "mineralogy",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "ice_permafrost",
+          "similarity": 0.875,
+          "earthValue": 0.0,
+          "targetValue": 0.1
+        }
+      ],
+      "composite": 0.8489,
+      "rank": 2
+    },
+    {
+      "cellId": "cell_taklamakan",
+      "targetId": "mars_jezero_ref",
+      "useCaseId": "uc_thermal_mobility",
+      "dimensions": [
+        {
+          "key": "slope_roughness",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "diurnal_temp_range",
+          "similarity": 0.7724,
+          "earthValue": 32.69,
+          "targetValue": 60.0
+        },
+        {
+          "key": "precipitation",
+          "similarity": 0.8832,
+          "earthValue": 58.4,
+          "targetValue": 0.0
+        },
+        {
+          "key": "vegetation_ndvi",
+          "similarity": 0.9098,
+          "earthValue": 0.0541,
+          "targetValue": 0.0
+        },
+        {
+          "key": "mineralogy",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "ice_permafrost",
+          "similarity": 0.9375,
+          "earthValue": 0.05,
+          "targetValue": 0.1
+        }
+      ],
+      "composite": 0.8452,
       "rank": 3
     },
     {
@@ -1422,8 +1422,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.95,
-          "earthValue": 0.03,
+          "similarity": 0.884,
+          "earthValue": 0.0696,
           "targetValue": 0.0
         },
         {
@@ -1439,11 +1439,11 @@
           "targetValue": 0.1
         }
       ],
-      "composite": 0.8485,
+      "composite": 0.8357,
       "rank": 4
     },
     {
-      "cellId": "cell_tibesti",
+      "cellId": "cell_atacama_valley",
       "targetId": "mars_jezero_ref",
       "useCaseId": "uc_thermal_mobility",
       "dimensions": [
@@ -1455,65 +1455,20 @@
         },
         {
           "key": "diurnal_temp_range",
-          "similarity": 0.7438,
-          "earthValue": 29.26,
+          "similarity": 0.7588,
+          "earthValue": 31.05,
           "targetValue": 60.0
         },
         {
           "key": "precipitation",
-          "similarity": 0.9562,
-          "earthValue": 21.9,
+          "similarity": 0.9416,
+          "earthValue": 29.2,
           "targetValue": 0.0
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.9167,
-          "earthValue": 0.05,
-          "targetValue": 0.0
-        },
-        {
-          "key": "mineralogy",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "ice_permafrost",
-          "similarity": 0.875,
-          "earthValue": 0.0,
-          "targetValue": 0.1
-        }
-      ],
-      "composite": 0.8451,
-      "rank": 5
-    },
-    {
-      "cellId": "cell_taklamakan",
-      "targetId": "mars_jezero_ref",
-      "useCaseId": "uc_thermal_mobility",
-      "dimensions": [
-        {
-          "key": "slope_roughness",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "diurnal_temp_range",
-          "similarity": 0.7724,
-          "earthValue": 32.69,
-          "targetValue": 60.0
-        },
-        {
-          "key": "precipitation",
-          "similarity": 0.8832,
-          "earthValue": 58.4,
-          "targetValue": 0.0
-        },
-        {
-          "key": "vegetation_ndvi",
-          "similarity": 0.9,
-          "earthValue": 0.06,
+          "similarity": 0.8057,
+          "earthValue": 0.1166,
           "targetValue": 0.0
         },
         {
@@ -1529,98 +1484,8 @@
           "targetValue": 0.1
         }
       ],
-      "composite": 0.8433,
-      "rank": 6
-    },
-    {
-      "cellId": "cell_sahara_tanezruft",
-      "targetId": "mars_jezero_ref",
-      "useCaseId": "uc_thermal_mobility",
-      "dimensions": [
-        {
-          "key": "slope_roughness",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "diurnal_temp_range",
-          "similarity": 0.7561,
-          "earthValue": 30.73,
-          "targetValue": 60.0
-        },
-        {
-          "key": "precipitation",
-          "similarity": 0.8978,
-          "earthValue": 51.1,
-          "targetValue": 0.0
-        },
-        {
-          "key": "vegetation_ndvi",
-          "similarity": 0.95,
-          "earthValue": 0.03,
-          "targetValue": 0.0
-        },
-        {
-          "key": "mineralogy",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "ice_permafrost",
-          "similarity": 0.875,
-          "earthValue": 0.0,
-          "targetValue": 0.1
-        }
-      ],
-      "composite": 0.8424,
-      "rank": 7
-    },
-    {
-      "cellId": "cell_namib",
-      "targetId": "mars_jezero_ref",
-      "useCaseId": "uc_thermal_mobility",
-      "dimensions": [
-        {
-          "key": "slope_roughness",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "diurnal_temp_range",
-          "similarity": 0.7755,
-          "earthValue": 33.06,
-          "targetValue": 60.0
-        },
-        {
-          "key": "precipitation",
-          "similarity": 0.8904,
-          "earthValue": 54.8,
-          "targetValue": 0.0
-        },
-        {
-          "key": "vegetation_ndvi",
-          "similarity": 0.8667,
-          "earthValue": 0.08,
-          "targetValue": 0.0
-        },
-        {
-          "key": "mineralogy",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "ice_permafrost",
-          "similarity": 0.9,
-          "earthValue": 0.02,
-          "targetValue": 0.1
-        }
-      ],
-      "composite": 0.8358,
-      "rank": 8
+      "composite": 0.8334,
+      "rank": 5
     },
     {
       "cellId": "cell_gobi",
@@ -1647,8 +1512,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.8333,
-          "earthValue": 0.1,
+          "similarity": 0.867,
+          "earthValue": 0.0798,
           "targetValue": 0.0
         },
         {
@@ -1664,7 +1529,142 @@
           "targetValue": 0.1
         }
       ],
-      "composite": 0.8181,
+      "composite": 0.8246,
+      "rank": 6
+    },
+    {
+      "cellId": "cell_tibesti",
+      "targetId": "mars_jezero_ref",
+      "useCaseId": "uc_thermal_mobility",
+      "dimensions": [
+        {
+          "key": "slope_roughness",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "diurnal_temp_range",
+          "similarity": 0.7438,
+          "earthValue": 29.26,
+          "targetValue": 60.0
+        },
+        {
+          "key": "precipitation",
+          "similarity": 0.9562,
+          "earthValue": 21.9,
+          "targetValue": 0.0
+        },
+        {
+          "key": "vegetation_ndvi",
+          "similarity": 0.8113,
+          "earthValue": 0.1132,
+          "targetValue": 0.0
+        },
+        {
+          "key": "mineralogy",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "ice_permafrost",
+          "similarity": 0.875,
+          "earthValue": 0.0,
+          "targetValue": 0.1
+        }
+      ],
+      "composite": 0.8246,
+      "rank": 7
+    },
+    {
+      "cellId": "cell_sahara_tanezruft",
+      "targetId": "mars_jezero_ref",
+      "useCaseId": "uc_thermal_mobility",
+      "dimensions": [
+        {
+          "key": "slope_roughness",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "diurnal_temp_range",
+          "similarity": 0.7561,
+          "earthValue": 30.73,
+          "targetValue": 60.0
+        },
+        {
+          "key": "precipitation",
+          "similarity": 0.8978,
+          "earthValue": 51.1,
+          "targetValue": 0.0
+        },
+        {
+          "key": "vegetation_ndvi",
+          "similarity": 0.846,
+          "earthValue": 0.0924,
+          "targetValue": 0.0
+        },
+        {
+          "key": "mineralogy",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "ice_permafrost",
+          "similarity": 0.875,
+          "earthValue": 0.0,
+          "targetValue": 0.1
+        }
+      ],
+      "composite": 0.8222,
+      "rank": 8
+    },
+    {
+      "cellId": "cell_namib",
+      "targetId": "mars_jezero_ref",
+      "useCaseId": "uc_thermal_mobility",
+      "dimensions": [
+        {
+          "key": "slope_roughness",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "diurnal_temp_range",
+          "similarity": 0.7755,
+          "earthValue": 33.06,
+          "targetValue": 60.0
+        },
+        {
+          "key": "precipitation",
+          "similarity": 0.8904,
+          "earthValue": 54.8,
+          "targetValue": 0.0
+        },
+        {
+          "key": "vegetation_ndvi",
+          "similarity": 0.7953,
+          "earthValue": 0.1228,
+          "targetValue": 0.0
+        },
+        {
+          "key": "mineralogy",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "ice_permafrost",
+          "similarity": 0.9,
+          "earthValue": 0.02,
+          "targetValue": 0.1
+        }
+      ],
+      "composite": 0.8219,
       "rank": 9
     },
     {
@@ -1692,8 +1692,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.8667,
-          "earthValue": 0.08,
+          "similarity": 0.8915,
+          "earthValue": 0.0651,
           "targetValue": 0.0
         },
         {
@@ -1709,7 +1709,7 @@
           "targetValue": 0.1
         }
       ],
-      "composite": 0.8066,
+      "composite": 0.8114,
       "rank": 10
     },
     {
@@ -1737,8 +1737,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.8667,
-          "earthValue": 0.08,
+          "similarity": 0.8202,
+          "earthValue": 0.1079,
           "targetValue": 0.0
         },
         {
@@ -1754,7 +1754,7 @@
           "targetValue": 0.1
         }
       ],
-      "composite": 0.8017,
+      "composite": 0.7927,
       "rank": 11
     },
     {
@@ -1782,8 +1782,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.9167,
-          "earthValue": 0.05,
+          "similarity": 0.8482,
+          "earthValue": 0.0911,
           "targetValue": 0.0
         },
         {
@@ -1799,53 +1799,8 @@
           "targetValue": 0.1
         }
       ],
-      "composite": 0.7882,
+      "composite": 0.7748,
       "rank": 12
-    },
-    {
-      "cellId": "cell_mojave",
-      "targetId": "mars_jezero_ref",
-      "useCaseId": "uc_thermal_mobility",
-      "dimensions": [
-        {
-          "key": "slope_roughness",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "diurnal_temp_range",
-          "similarity": 0.7823,
-          "earthValue": 33.88,
-          "targetValue": 60.0
-        },
-        {
-          "key": "precipitation",
-          "similarity": 0.6932,
-          "earthValue": 153.4,
-          "targetValue": 0.0
-        },
-        {
-          "key": "vegetation_ndvi",
-          "similarity": 0.8,
-          "earthValue": 0.12,
-          "targetValue": 0.0
-        },
-        {
-          "key": "mineralogy",
-          "similarity": null,
-          "earthValue": null,
-          "targetValue": null
-        },
-        {
-          "key": "ice_permafrost",
-          "similarity": 0.875,
-          "earthValue": 0.0,
-          "targetValue": 0.1
-        }
-      ],
-      "composite": 0.7738,
-      "rank": 13
     },
     {
       "cellId": "cell_puna",
@@ -1872,8 +1827,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.9,
-          "earthValue": 0.06,
+          "similarity": 0.893,
+          "earthValue": 0.0642,
           "targetValue": 0.0
         },
         {
@@ -1889,8 +1844,8 @@
           "targetValue": 0.1
         }
       ],
-      "composite": 0.7676,
-      "rank": 14
+      "composite": 0.7662,
+      "rank": 13
     },
     {
       "cellId": "cell_skeleton_coast",
@@ -1917,8 +1872,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.8833,
-          "earthValue": 0.07,
+          "similarity": 0.8608,
+          "earthValue": 0.0835,
           "targetValue": 0.0
         },
         {
@@ -1934,7 +1889,52 @@
           "targetValue": 0.1
         }
       ],
-      "composite": 0.7572,
+      "composite": 0.7528,
+      "rank": 14
+    },
+    {
+      "cellId": "cell_mojave",
+      "targetId": "mars_jezero_ref",
+      "useCaseId": "uc_thermal_mobility",
+      "dimensions": [
+        {
+          "key": "slope_roughness",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "diurnal_temp_range",
+          "similarity": 0.7823,
+          "earthValue": 33.88,
+          "targetValue": 60.0
+        },
+        {
+          "key": "precipitation",
+          "similarity": 0.6932,
+          "earthValue": 153.4,
+          "targetValue": 0.0
+        },
+        {
+          "key": "vegetation_ndvi",
+          "similarity": 0.6473,
+          "earthValue": 0.2116,
+          "targetValue": 0.0
+        },
+        {
+          "key": "mineralogy",
+          "similarity": null,
+          "earthValue": null,
+          "targetValue": null
+        },
+        {
+          "key": "ice_permafrost",
+          "similarity": 0.875,
+          "earthValue": 0.0,
+          "targetValue": 0.1
+        }
+      ],
+      "composite": 0.7441,
       "rank": 15
     },
     {
@@ -1962,8 +1962,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.9667,
-          "earthValue": 0.02,
+          "similarity": null,
+          "earthValue": null,
           "targetValue": 0.0
         },
         {
@@ -1979,7 +1979,7 @@
           "targetValue": 0.1
         }
       ],
-      "composite": 0.7395,
+      "composite": 0.6846,
       "rank": 16
     },
     {
@@ -2007,8 +2007,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.8333,
-          "earthValue": 0.1,
+          "similarity": 0.7835,
+          "earthValue": 0.1299,
           "targetValue": 0.0
         },
         {
@@ -2024,7 +2024,7 @@
           "targetValue": 0.1
         }
       ],
-      "composite": 0.6193,
+      "composite": 0.6096,
       "rank": 17
     },
     {
@@ -2052,8 +2052,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.9333,
-          "earthValue": 0.04,
+          "similarity": 0.9633,
+          "earthValue": 0.022,
           "targetValue": 0.0
         },
         {
@@ -2069,7 +2069,7 @@
           "targetValue": 0.1
         }
       ],
-      "composite": 0.6028,
+      "composite": 0.6086,
       "rank": 18
     },
     {
@@ -2097,8 +2097,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.4167,
-          "earthValue": 0.35,
+          "similarity": 0.9962,
+          "earthValue": 0.0023,
           "targetValue": 0.0
         },
         {
@@ -2114,7 +2114,7 @@
           "targetValue": 0.1
         }
       ],
-      "composite": 0.4832,
+      "composite": 0.5959,
       "rank": 19
     },
     {
@@ -2142,8 +2142,8 @@
         },
         {
           "key": "vegetation_ndvi",
-          "similarity": 0.25,
-          "earthValue": 0.45,
+          "similarity": 0.7038,
+          "earthValue": 0.1777,
           "targetValue": 0.0
         },
         {
@@ -2159,7 +2159,7 @@
           "targetValue": 0.1
         }
       ],
-      "composite": 0.4226,
+      "composite": 0.5108,
       "rank": 20
     }
   ],
@@ -2172,22 +2172,22 @@
         {
           "analogId": "ka_dry_valleys",
           "rank": 1,
-          "composite": 0.9035
+          "composite": 0.8694
         },
         {
           "analogId": "ka_atacama",
-          "rank": 3,
-          "composite": 0.7609
+          "rank": 2,
+          "composite": 0.7615
         },
         {
           "analogId": "ka_iceland",
-          "rank": 19,
-          "composite": 0.1833
+          "rank": 17,
+          "composite": 0.3862
         },
         {
           "analogId": "ka_hawaii",
           "rank": 20,
-          "composite": 0.0875
+          "composite": 0.2463
         }
       ],
       "passed": true,
@@ -2200,27 +2200,27 @@
       "knownAnalogsInTop": [
         {
           "analogId": "ka_atacama",
-          "rank": 3,
-          "composite": 0.8547
+          "rank": 1,
+          "composite": 0.855
         },
         {
           "analogId": "ka_dry_valleys",
           "rank": 16,
-          "composite": 0.7395
+          "composite": 0.6846
         },
         {
           "analogId": "ka_iceland",
           "rank": 19,
-          "composite": 0.4832
+          "composite": 0.5959
         },
         {
           "analogId": "ka_hawaii",
           "rank": 20,
-          "composite": 0.4226
+          "composite": 0.5108
         }
       ],
       "passed": true,
-      "notes": "Best known-analog rank=3; 1/4 in top 50% (n=20). Pass rule: \u22651 known analog in top 3."
+      "notes": "Best known-analog rank=1; 1/4 in top 50% (n=20). Pass rule: \u22651 known analog in top 3."
     }
   ]
 }

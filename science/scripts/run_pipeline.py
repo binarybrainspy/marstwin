@@ -3,14 +3,15 @@ MarsTwin coarse pipeline — enrich Earth cells, score vs Moon/Mars, validate, e
 
 Usage (from repo root):
   python science/scripts/run_pipeline.py
-  python science/scripts/run_pipeline.py --skip-power   # use cache / CSV only
+  python science/scripts/run_pipeline.py --skip-power   # offline: cache / CSV only
   python science/scripts/run_pipeline.py --force-power  # refetch POWER
+  python science/scripts/run_pipeline.py --force-ndvi   # refetch MODIS NDVI
+  python science/scripts/run_pipeline.py --skip-ndvi    # keep cached NDVI only
 """
 
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import sys
 from pathlib import Path
@@ -19,11 +20,18 @@ ROOT = Path(__file__).resolve().parents[2]
 SCIENCE = ROOT / "science"
 WEB_DATA = ROOT / "apps" / "web" / "public" / "data"
 CACHE = SCIENCE / "cache" / "power_climatology.json"
+NDVI_CACHE = SCIENCE / "cache" / "modis_ndvi.json"
 sys.path.insert(0, str(SCIENCE))
 
+from lib.io_util import (  # noqa: E402
+    assert_target_contracts,
+    load_cells,
+    load_profiles,
+    sync_profiles_to_web,
+)
+from lib.ndvi import DEFAULT_YEAR as NDVI_DEFAULT_YEAR, enrich_cells_with_ndvi  # noqa: E402
 from lib.power import enrich_cells_with_power  # noqa: E402
 from lib.scoring import (  # noqa: E402
-    DIMENSION_KEYS,
     extract_target_values,
     rank_results,
     score_cell,
@@ -32,36 +40,6 @@ from lib.scoring import (  # noqa: E402
 
 MARS_TARGET_ID = "mars_jezero_ref"
 MOON_TARGET_ID = "moon_spole_ref"
-
-
-def load_json(path: Path):
-    with path.open(encoding="utf-8") as f:
-        return json.load(f)
-
-
-def load_cells(path: Path) -> list[dict]:
-    cells = []
-    with path.open(encoding="utf-8", newline="") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            features = {}
-            for key in DIMENSION_KEYS:
-                raw = (row.get(key) or "").strip()
-                features[key] = None if raw == "" else float(raw)
-            cells.append(
-                {
-                    "id": row["id"],
-                    "lat": float(row["lat"]),
-                    "lon": float(row["lon"]),
-                    "cellDeg": float(row["cell_deg"]),
-                    "regionHint": row.get("region_hint") or None,
-                    "isKnownAnalog": row.get("is_known_analog", "").lower() == "true",
-                    "knownAnalogId": row.get("known_analog_id") or None,
-                    "features": features,
-                    "tempKind": "air",
-                }
-            )
-    return cells
 
 
 def default_gaps(for_moon: bool) -> list[dict]:
@@ -96,6 +74,16 @@ def default_gaps(for_moon: bool) -> list[dict]:
                 "Earth POWER uses T2M air — compare air↔air. MODIS LST is ground and must not be mixed unlabeled."
             ),
             "severity": "partial",
+        },
+        {
+            "id": "g_ndvi_scale",
+            "category": "scale",
+            "title": "Vegetation sample scale",
+            "detail": (
+                "NDVI is a MODIS 250 m point sample in a ~2 km box at the cell centre, "
+                "not a 0.5° area mean. Bare cover within the cell can differ from the sample."
+            ),
+            "severity": "manageable",
         },
         {
             "id": "g_bio",
@@ -137,17 +125,30 @@ def build_candidates(
             continue
         name = cell.get("regionHint") or cell["id"]
         slope = cell["features"].get("slope_roughness")
+        ndvi = cell["features"].get("vegetation_ndvi")
         transfers = [
-            "Low vegetation / arid surface for mobility and dust-adjacent checkout",
             "Air-temperature diurnal swing from NASA POWER for thermal-cycling rehearsal (air↔air vs MEDA)",
         ]
-        if slope is not None:
+        if ndvi is not None:
             transfers.insert(
-                0, "Slope stats at shared 20 m baseline suitable for traverse rehearsal"
+                0,
+                f"MODIS NDVI {ndvi:.3f} in a ~2 km sample — barren-surface rehearsal "
+                "for mobility and dust-adjacent checkout",
+            )
+        else:
+            transfers.insert(
+                0,
+                "NDVI unavailable (no MOD13Q1 coverage) — vegetation similarity "
+                "excluded, not guessed",
+            )
+        if slope is not None:
+            transfers.append(
+                "Slope stats at shared 20 m baseline suitable for traverse rehearsal"
             )
         else:
             transfers.append(
-                "Slope pending — will use same 20 m DEM baseline as Jezero USGS + lunar LOLA"
+                "Slope pending — same 20 m DEM baseline as Jezero USGS + lunar LOLA "
+                "(compute_slopes_20m.py)"
             )
 
         cards.append(
@@ -162,7 +163,7 @@ def build_candidates(
                 "breaks": [
                     "Earth gravity and atmosphere do not transfer",
                     "Illumination / radiation environment is not planetary",
-                    "Lunar mineralogy left uncitable — zero-weighted / null",
+                    "Mineralogy zero-weighted until a citable site value exists",
                     "Do not treat POWER air ΔT as MODIS land-surface ΔT",
                 ],
                 "tests": [
@@ -172,6 +173,7 @@ def build_candidates(
                 ],
                 "scaleNotes": (
                     f"Coarse cell ~{cell['cellDeg']}°. "
+                    "NDVI: MODIS MOD13Q1 250 m annual mean in a ~2 km box. "
                     "Slopes: null until LOLA / USGS Jezero / Earth DEM at 20 m baseline. "
                     "Thermal: NASA POWER T2M air climatology."
                 ),
@@ -191,7 +193,10 @@ def method_doc() -> dict:
         "dimensions": [
             {
                 "key": "slope_roughness",
-                "earthSource": "Pending DEM slope at 20 m baseline (SRTM/Copernicus)",
+                "earthSource": (
+                    "DEM slope at 20 m baseline (SRTM/Copernicus) via "
+                    "compute_slopes_20m.py; null until computed"
+                ),
                 "targetSource": "LOLA polar DEM + USGS Jezero 20 m — compute, do not invent",
                 "transform": "similarity = 1 - clip(|e-t|/20°, 0, 1); null until computed",
             },
@@ -209,9 +214,12 @@ def method_doc() -> dict:
             },
             {
                 "key": "vegetation_ndvi",
-                "earthSource": "Manual/NDVI stub → GIBS/MODIS NDVI next",
+                "earthSource": (
+                    "MODIS MOD13Q1 250 m 16-day NDVI — annual mean in a ~2 km box "
+                    "around the cell centre (ORNL DAAC subset API)"
+                ),
                 "targetSource": "0 barren target",
-                "transform": "similarity = 1 - clip(|e-t|/0.6, 0, 1)",
+                "transform": "similarity = 1 - clip(|e-t|/0.6, 0, 1); null when the fetch fails",
             },
             {
                 "key": "mineralogy",
@@ -237,22 +245,42 @@ def method_doc() -> dict:
             "Moon diurnal ΔT left null — PSR ~40 K floor is a gap, not a fake score",
             "Mineralogy zero-weighted until citable",
             "Temperature path is air↔air (POWER vs MEDA); MODIS LST is a separate track",
-            "NDVI still stub values — wire GIBS/MODIS next",
+            "NDVI is a MODIS 250 m point sample (~2 km box), not a 0.5° area mean; null when fetch fails",
             "Composite is secondary; fingerprint + gap report are primary",
         ],
     }
 
 
 def main() -> None:
+    # Windows consoles default to cp1252; keep Unicode output (Δ, →) from crashing.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
     parser = argparse.ArgumentParser(description="MarsTwin coarse pipeline")
     parser.add_argument("--skip-power", action="store_true", help="Do not call POWER API")
     parser.add_argument("--force-power", action="store_true", help="Refetch POWER even if cached")
+    parser.add_argument(
+        "--skip-ndvi",
+        action="store_true",
+        help="Do not call the ORNL MODIS NDVI API (use cached values only)",
+    )
+    parser.add_argument(
+        "--force-ndvi",
+        action="store_true",
+        help="Refetch MODIS NDVI even if cached",
+    )
+    parser.add_argument(
+        "--ndvi-year",
+        type=int,
+        default=NDVI_DEFAULT_YEAR,
+        help=f"MODIS NDVI year to sample (default {NDVI_DEFAULT_YEAR})",
+    )
     args = parser.parse_args()
 
-    use_cases = load_json(WEB_DATA / "usecases.json")
-    targets = load_json(WEB_DATA / "targets.json")
-    known = load_json(WEB_DATA / "known_analogs.json")
-    cells = load_cells(SCIENCE / "profiles" / "earth_cells.csv")
+    use_cases, targets, known = load_profiles()
+    assert_target_contracts(targets)
+    sync_profiles_to_web()
+    cells = load_cells()
     use_case = use_cases[0]
 
     if not args.skip_power:
@@ -265,6 +293,16 @@ def main() -> None:
         cells = enrich_cells_with_power(cells, CACHE, force=False)
     else:
         print("WARNING: no POWER cache and --skip-power set; precip/ΔT may be null")
+
+    ndvi_fetch = not (args.skip_ndvi or args.skip_power)
+    print("Enriching cells with MODIS NDVI (MOD13Q1, 250 m, ORNL DAAC)…")
+    cells = enrich_cells_with_ndvi(
+        cells,
+        NDVI_CACHE,
+        year=args.ndvi_year,
+        fetch=ndvi_fetch,
+        force=args.force_ndvi and ndvi_fetch,
+    )
 
     cells_by_id = {c["id"]: c for c in cells}
 

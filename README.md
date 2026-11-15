@@ -1,6 +1,6 @@
 # MarsTwin — NASA Space Apps 2026
 
-Solo build: **hardware-test first** (thermal cycling + mobility), **six dimensions**, coarse → validate → exclude famous → analogy cards with gap report.
+Duo build: **hardware-test first** (thermal cycling + mobility), **six dimensions**, coarse → validate → exclude famous → analogy cards with gap report.
 
 ## Quick start
 
@@ -18,9 +18,10 @@ Open http://localhost:5173
 
 ## Locked science rules
 
-- **Slopes:** null until 20 m DEM (Earth + LOLA + USGS Jezero)
+- **Slopes:** null until computed at a shared 20 m baseline (Earth DEM + LOLA + USGS Jezero); coarser DEMs are flagged, not relabeled
 - **Thermal:** air↔air (POWER T2M vs MEDA ~60 K at Jezero); Moon PSR ~40 K is a **gap**, not a score
 - **Mineralogy:** null / weight 0 until citable
+- **Vegetation:** MODIS MOD13Q1 250 m annual mean (2025) in a ~2 km point sample; no coverage or fetch failure → null, never a stub
 - **Hardware-test narrative:** thermal cycling + mobility
 
 Sources roadmap: `docs/DATA_SOURCES.md`
