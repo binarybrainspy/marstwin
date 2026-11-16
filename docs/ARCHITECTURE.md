@@ -1,6 +1,6 @@
 # MarsTwin — Architecture (Prep Only)
 
-> **Rule reminder:** Do not write application code or visual design assets until the official 2026 participant terms confirm what is allowed. This document is planning only. Bootstrap commands are listed for Day 1 copy-paste.
+> **Status note:** This is the original design and scoping document. The app and pipeline are now implemented; see the root [`README.md`](../README.md) for the current system, setup and data contract. Product thesis, route map and scoring logic below still describe the shipped architecture.
 
 **Working name:** MarsTwin (folder: `marstwin`)  
 **Challenge:** Analog Earth Locations — characterize terrestrial analogs for Moon/Mars  

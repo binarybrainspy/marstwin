@@ -8,23 +8,27 @@
       "mars_jezero_ref"
     ],
     "useCaseId": "uc_thermal_mobility",
+    "rank": 2,
+    "composite": 0.8489,
+    "headline": "Sand, swing, and open sightlines",
+    "story": "Egypt's Western Desert pairs dune seas with gravel plains and almost no vegetation. The result is a clean, open test surface with a strong day-night air swing for thermal rehearsals.",
     "transfers": [
-      "MODIS NDVI 0.090 in a ~2 km sample \u2014 barren-surface rehearsal for mobility and dust-adjacent checkout",
-      "Air-temperature diurnal swing from NASA POWER for thermal-cycling rehearsal (air\u2194air vs MEDA)",
-      "Slope pending \u2014 same 20 m DEM baseline as Jezero USGS + lunar LOLA (compute_slopes_20m.py)"
+      "Almost no vegetation (MODIS NDVI 0.090) \u2014 wheels meet soil and rock rather than root mat",
+      "31 K day\u2013night air swing (NASA POWER) for thermal-cycling practice",
+      "Slope still unknown \u2014 it will use the same 20 m baseline as Jezero and the lunar poles"
     ],
     "breaks": [
-      "Earth gravity and atmosphere do not transfer",
-      "Illumination / radiation environment is not planetary",
-      "Mineralogy zero-weighted until a citable site value exists",
-      "Do not treat POWER air \u0394T as MODIS land-surface \u0394T"
+      "Earth's gravity and thick atmosphere do not transfer",
+      "Light and radiation are planetary, not terrestrial",
+      "Mineralogy is blank until a citable site value exists",
+      "Air temperature here is not the same as ground temperature"
     ],
     "tests": [
-      "Instrument thermal soak / diurnal cycle checkout (air-side matched)",
-      "Wheel\u2013soil interaction once 20 m slopes are filled",
-      "Ops rehearsal: timed rover shift under thermal stress"
+      "Run a full thermal soak through a site day\u2013night cycle",
+      "Drive a wheel\u2013soil test once 20 m slopes are filled",
+      "Rehearse a timed rover shift under thermal stress"
     ],
-    "scaleNotes": "Coarse cell ~0.5\u00b0. NDVI: MODIS MOD13Q1 250 m annual mean in a ~2 km box. Slopes: null until LOLA / USGS Jezero / Earth DEM at 20 m baseline. Thermal: NASA POWER T2M air climatology.",
+    "scaleNotes": "Screen cell ~0.5\u00b0. Vegetation: MODIS 250 m point sample. Slopes: pending shared 20 m baseline. Temperature: air, NASA POWER.",
     "fingerprint": [
       {
         "key": "slope_roughness",
@@ -117,23 +121,27 @@
       "mars_jezero_ref"
     ],
     "useCaseId": "uc_thermal_mobility",
+    "rank": 3,
+    "composite": 0.8452,
+    "headline": "A cold desert stress test",
+    "story": "The Taklamakan sits in a mountain-ringed basin, with migrating dunes and dust that punish seals, bearings and optics. Its aridity and temperature swing make it a useful worst-case site.",
     "transfers": [
-      "MODIS NDVI 0.054 in a ~2 km sample \u2014 barren-surface rehearsal for mobility and dust-adjacent checkout",
-      "Air-temperature diurnal swing from NASA POWER for thermal-cycling rehearsal (air\u2194air vs MEDA)",
-      "Slope pending \u2014 same 20 m DEM baseline as Jezero USGS + lunar LOLA (compute_slopes_20m.py)"
+      "Almost no vegetation (MODIS NDVI 0.054) \u2014 wheels meet soil and rock rather than root mat",
+      "33 K day\u2013night air swing (NASA POWER) for thermal-cycling practice",
+      "Slope still unknown \u2014 it will use the same 20 m baseline as Jezero and the lunar poles"
     ],
     "breaks": [
-      "Earth gravity and atmosphere do not transfer",
-      "Illumination / radiation environment is not planetary",
-      "Mineralogy zero-weighted until a citable site value exists",
-      "Do not treat POWER air \u0394T as MODIS land-surface \u0394T"
+      "Earth's gravity and thick atmosphere do not transfer",
+      "Light and radiation are planetary, not terrestrial",
+      "Mineralogy is blank until a citable site value exists",
+      "Air temperature here is not the same as ground temperature"
     ],
     "tests": [
-      "Instrument thermal soak / diurnal cycle checkout (air-side matched)",
-      "Wheel\u2013soil interaction once 20 m slopes are filled",
-      "Ops rehearsal: timed rover shift under thermal stress"
+      "Run a full thermal soak through a site day\u2013night cycle",
+      "Drive a wheel\u2013soil test once 20 m slopes are filled",
+      "Rehearse a timed rover shift under thermal stress"
     ],
-    "scaleNotes": "Coarse cell ~0.5\u00b0. NDVI: MODIS MOD13Q1 250 m annual mean in a ~2 km box. Slopes: null until LOLA / USGS Jezero / Earth DEM at 20 m baseline. Thermal: NASA POWER T2M air climatology.",
+    "scaleNotes": "Screen cell ~0.5\u00b0. Vegetation: MODIS 250 m point sample. Slopes: pending shared 20 m baseline. Temperature: air, NASA POWER.",
     "fingerprint": [
       {
         "key": "slope_roughness",

@@ -1,0 +1,56 @@
+{
+  "provider": "NASA Image and Video Library",
+  "note": "NASA imagery is generally not copyrighted; individual credits are listed per asset.",
+  "assets": {
+    "hero-mars": {
+      "file": "/images/hero-mars.jpg",
+      "nasaId": "PIA20332",
+      "title": "Full-Circle Vista from Naukluft Plateau on Mars",
+      "credit": "NASA/JPL-Caltech/MSSS",
+      "center": "JPL",
+      "dateCreated": "2016-04-27T16:52:37Z",
+      "source": "https://images.nasa.gov/details/PIA20332",
+      "role": "Mars panorama hero"
+    },
+    "target-mars": {
+      "file": "/images/target-mars.jpg",
+      "nasaId": "PIA24096",
+      "title": "Jezero Crater as Seen by ESA's Mars Express Orbiter",
+      "credit": "ESA/DLR/FU-Berlin",
+      "center": "JPL",
+      "dateCreated": "2020-09-21T00:00:00Z",
+      "source": "https://images.nasa.gov/details/PIA24096",
+      "role": "Jezero Crater target"
+    },
+    "target-moon": {
+      "file": "/images/target-moon.jpg",
+      "nasaId": "PIA00001",
+      "title": "South Pole Region of the Moon as Seen by Clementine",
+      "credit": "NASA/JPL/USGS",
+      "center": "JPL",
+      "dateCreated": "1996-06-03T15:15:49Z",
+      "source": "https://images.nasa.gov/details/PIA00001",
+      "role": "Lunar south pole target"
+    },
+    "analog-dry-valleys": {
+      "file": "/images/analog-dry-valleys.jpg",
+      "nasaId": "PIA12461",
+      "title": "Dry Valleys, Antarctica",
+      "credit": "NASA/GSFC/METI/ERSDAC/JAROS, and U.S./Japan ASTER Science Team",
+      "center": "JPL",
+      "dateCreated": "2009-11-02T18:42:53Z",
+      "source": "https://images.nasa.gov/details/PIA12461",
+      "role": "McMurdo Dry Valleys known analog"
+    },
+    "analog-atacama": {
+      "file": "/images/analog-atacama.jpg",
+      "nasaId": "PIA23420",
+      "title": "Salar de Atacama, Chile",
+      "credit": "NASA/METI/AIST/Japan Space Systems, and U.S./Japan ASTER Science Team",
+      "center": "JPL",
+      "dateCreated": "2019-09-05T00:00:00Z",
+      "source": "https://images.nasa.gov/details/PIA23420",
+      "role": "Atacama Desert known analog"
+    }
+  }
+}

@@ -108,6 +108,10 @@ export interface AnalogyCard {
   lon: number
   targetIds: string[]
   useCaseId: string
+  rank?: number
+  composite?: number | null
+  headline?: string
+  story?: string
   transfers: string[]
   breaks: string[]
   tests: string[]
@@ -146,4 +150,57 @@ export interface CoarseBundle {
   cells: EarthCell[]
   results: SimilarityResult[]
   validation: ValidationReport[]
+}
+
+export interface ManifestSource {
+  id: string
+  name: string
+  role: string
+  url: string
+}
+
+export interface Manifest {
+  schemaVersion: number
+  pipelineVersion: string
+  generatedAt: string
+  counts: {
+    cells: number
+    targets: number
+    knownAnalogs: number
+    candidates: number
+    ndviWithData: number
+    ndviMissing: number
+    slopesComputed: number
+  }
+  ndvi: {
+    product: string
+    band: string
+    year: number
+    boxKm: number
+    sampling: string
+    cellsWithData: string[]
+    cellsMissing: string[]
+  }
+  slope: {
+    baselineM: number
+    method: string
+    status: 'pending' | 'computed' | 'partial'
+    cellsComputed: string[]
+  }
+  targets: Array<{ id: string; name: string; body: 'moon' | 'mars' }>
+  validation: Array<{
+    targetId: string
+    passed: boolean
+    notes: string
+    bestKnownAnalogRank: number | null
+  }>
+  sources: ManifestSource[]
+  imagery: {
+    sitePattern: string
+    hero: string
+    targets: Record<'moon' | 'mars', string>
+    credits: string
+  }
+  files: string[]
+  notes: string[]
 }

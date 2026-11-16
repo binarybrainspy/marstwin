@@ -1,7 +1,6 @@
 # Data Contracts
 
-Frozen JSON shapes the Vite app will consume from `public/data/`.  
-Implement types in TypeScript on Day 1 by copying these interfaces almost verbatim.
+The frontend consumes static JSON from `apps/web/public/data/`. The interfaces below document the current shapes; the TypeScript source of truth is `apps/web/src/shared/types.ts`.
 
 ---
 
@@ -9,6 +8,7 @@ Implement types in TypeScript on Day 1 by copying these interfaces almost verbat
 
 ```
 public/data/
+  manifest.json            # data-run provenance + counts + status
   usecases.json
   targets.json
   known_analogs.json
@@ -78,6 +78,9 @@ export interface EarthCell {
   cellDeg: number;
   features: FeatureVector;
   regionHint?: string; // e.g. "Namib", "Sahara"
+  isKnownAnalog?: boolean;
+  knownAnalogId?: string;
+  tempKind?: 'air' | 'ground';
 }
 
 export interface DimensionScore {
@@ -133,6 +136,10 @@ export interface AnalogyCard {
   lon: number;
   targetIds: string[];
   useCaseId: string;
+  rank?: number;
+  composite?: number | null;
+  headline?: string;
+  story?: string;
   /** What physical/process similarity transfers */
   transfers: string[];
   /** Where the analogy breaks (links to gaps) */
@@ -169,6 +176,52 @@ export interface MethodDoc {
   }>;
   exclusions: string[]; // famous sites removed after validation
   limitations: string[];
+}
+
+export interface Manifest {
+  schemaVersion: number;
+  pipelineVersion: string;
+  generatedAt: string; // ISO 8601
+  counts: {
+    cells: number;
+    targets: number;
+    knownAnalogs: number;
+    candidates: number;
+    ndviWithData: number;
+    ndviMissing: number;
+    slopesComputed: number;
+  };
+  ndvi: {
+    product: string;
+    band: string;
+    year: number;
+    boxKm: number;
+    sampling: string;
+    cellsWithData: string[];
+    cellsMissing: string[];
+  };
+  slope: {
+    baselineM: number;
+    method: string;
+    status: 'pending' | 'computed' | 'partial';
+    cellsComputed: string[];
+  };
+  targets: Array<{ id: string; name: string; body: 'moon' | 'mars' }>;
+  validation: Array<{
+    targetId: string;
+    passed: boolean;
+    notes: string;
+    bestKnownAnalogRank: number | null;
+  }>;
+  sources: Array<{ id: string; name: string; role: string; url: string }>;
+  imagery: {
+    sitePattern: string;
+    hero: string;
+    targets: Record<'moon' | 'mars', string>;
+    credits: string;
+  };
+  files: string[];
+  notes: string[];
 }
 ```
 

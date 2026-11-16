@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "pipelineVersion": "0.6.0",
+  "generatedAt": "2026-11-15T23:32:39+00:00",
+  "counts": {
+    "cells": 20,
+    "targets": 2,
+    "knownAnalogs": 4,
+    "candidates": 2,
+    "ndviWithData": 19,
+    "ndviMissing": 1,
+    "slopesComputed": 0
+  },
+  "ndvi": {
+    "product": "MODIS MOD13Q1",
+    "band": "250m_16_days_NDVI",
+    "year": 2025,
+    "boxKm": 1,
+    "sampling": "Annual mean of 16-day composites in a point sample around the cell centre; not a 0.5 degree area mean.",
+    "cellsWithData": [
+      "cell_atacama",
+      "cell_iceland",
+      "cell_hawaii",
+      "cell_namib",
+      "cell_danakil",
+      "cell_sahara_tanezruft",
+      "cell_mojave",
+      "cell_gobi",
+      "cell_puna",
+      "cell_sahara_ahaggar",
+      "cell_tibesti",
+      "cell_w_desert_egypt",
+      "cell_chott_el_jerid",
+      "cell_makgadikgadi",
+      "cell_atacama_valley",
+      "cell_death_valley",
+      "cell_lut_desert",
+      "cell_taklamakan",
+      "cell_skeleton_coast"
+    ],
+    "cellsMissing": [
+      "cell_dry_valleys"
+    ]
+  },
+  "slope": {
+    "baselineM": 20,
+    "method": "Horn 3x3 gradient; finer DEMs block-averaged to 20 m",
+    "status": "pending",
+    "cellsComputed": []
+  },
+  "targets": [
+    {
+      "id": "moon_spole_ref",
+      "name": "Lunar south-polar ops-adjacent reference (Shackleton rim vicinity)",
+      "body": "moon"
+    },
+    {
+      "id": "mars_jezero_ref",
+      "name": "Mars Jezero crater (Perseverance / MEDA)",
+      "body": "mars"
+    }
+  ],
+  "validation": [
+    {
+      "targetId": "moon_spole_ref",
+      "passed": true,
+      "notes": "Best known-analog rank=1; 2/4 in top 50% (n=20). Pass rule: \u22651 known analog in top 3.",
+      "bestKnownAnalogRank": 1
+    },
+    {
+      "targetId": "mars_jezero_ref",
+      "passed": true,
+      "notes": "Best known-analog rank=1; 1/4 in top 50% (n=20). Pass rule: \u22651 known analog in top 3.",
+      "bestKnownAnalogRank": 1
+    }
+  ],
+  "sources": [
+    {
+      "id": "power",
+      "name": "NASA POWER",
+      "role": "Air temperature and precipitation climatology",
+      "url": "https://power.larc.nasa.gov/"
+    },
+    {
+      "id": "modis-ndvi",
+      "name": "NASA ORNL DAAC MODIS MOD13Q1",
+      "role": "250 m, 16-day vegetation index",
+      "url": "https://modis.ornl.gov/"
+    },
+    {
+      "id": "meda",
+      "name": "NASA Perseverance MEDA",
+      "role": "Jezero Crater air temperature",
+      "url": "https://mars.nasa.gov/mars2020/weather/"
+    },
+    {
+      "id": "usgs-jezero",
+      "name": "USGS Astrogeology",
+      "role": "Jezero Crater 20 m DEM (slope pending)",
+      "url": "https://astrogeology.usgs.gov/"
+    },
+    {
+      "id": "lola-diviner",
+      "name": "NASA LRO LOLA / Diviner",
+      "role": "Lunar polar topography and cold-trap temperatures",
+      "url": "https://lunar.gsfc.nasa.gov/"
+    },
+    {
+      "id": "esri-imagery",
+      "name": "Esri World Imagery",
+      "role": "Earth site imagery (Esri, Maxar, Earthstar Geographics)",
+      "url": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9"
+    },
+    {
+      "id": "nasa-images",
+      "name": "NASA Image and Video Library",
+      "role": "Mars, Moon and analog reference imagery",
+      "url": "https://images.nasa.gov/"
+    }
+  ],
+  "imagery": {
+    "sitePattern": "/images/sites/{cellId}.jpg",
+    "hero": "/images/hero-mars.jpg",
+    "targets": {
+      "mars": "/images/target-mars.jpg",
+      "moon": "/images/target-moon.jpg"
+    },
+    "credits": "Earth imagery: Esri, Maxar, Earthstar Geographics. Mars/Moon imagery: NASA/JPL-Caltech and partners."
+  },
+  "files": [
+    "manifest.json",
+    "coarse_results.json",
+    "candidates.json",
+    "method.json",
+    "usecases.json",
+    "targets.json",
+    "known_analogs.json"
+  ],
+  "notes": [
+    "Match score is a screening aid, not a site-selection verdict.",
+    "A null observation is shown as unknown and excluded from the weighted score.",
+    "Technical method and limitations live in the repository documentation."
+  ]
+}

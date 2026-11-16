@@ -29,6 +29,7 @@ from lib.io_util import (  # noqa: E402
     load_profiles,
     sync_profiles_to_web,
 )
+from lib.manifest import build_manifest  # noqa: E402
 from lib.ndvi import DEFAULT_YEAR as NDVI_DEFAULT_YEAR, enrich_cells_with_ndvi  # noqa: E402
 from lib.power import enrich_cells_with_power  # noqa: E402
 from lib.scoring import (  # noqa: E402
@@ -40,6 +41,25 @@ from lib.scoring import (  # noqa: E402
 
 MARS_TARGET_ID = "mars_jezero_ref"
 MOON_TARGET_ID = "moon_spole_ref"
+
+CARD_STORIES = {
+    "cell_w_desert_egypt": {
+        "headline": "Sand, swing, and open sightlines",
+        "story": (
+            "Egypt's Western Desert pairs dune seas with gravel plains and almost "
+            "no vegetation. The result is a clean, open test surface with a strong "
+            "day-night air swing for thermal rehearsals."
+        ),
+    },
+    "cell_taklamakan": {
+        "headline": "A cold desert stress test",
+        "story": (
+            "The Taklamakan sits in a mountain-ringed basin, with migrating dunes "
+            "and dust that punish seals, bearings and optics. Its aridity and "
+            "temperature swing make it a useful worst-case site."
+        ),
+    },
+}
 
 
 def default_gaps(for_moon: bool) -> list[dict]:
@@ -126,29 +146,43 @@ def build_candidates(
         name = cell.get("regionHint") or cell["id"]
         slope = cell["features"].get("slope_roughness")
         ndvi = cell["features"].get("vegetation_ndvi")
-        transfers = [
-            "Air-temperature diurnal swing from NASA POWER for thermal-cycling rehearsal (air↔air vs MEDA)",
-        ]
+        dt = cell["features"].get("diurnal_temp_range")
+        story = CARD_STORIES.get(
+            cell["id"],
+            {
+                "headline": "A dry, high-swing test surface",
+                "story": (
+                    "Low vegetation and a wide day-night temperature swing put "
+                    "this site near the top of the screen."
+                ),
+            },
+        )
+        transfers = []
         if ndvi is not None:
-            transfers.insert(
-                0,
-                f"MODIS NDVI {ndvi:.3f} in a ~2 km sample — barren-surface rehearsal "
-                "for mobility and dust-adjacent checkout",
+            transfers.append(
+                f"Almost no vegetation (MODIS NDVI {ndvi:.3f}) — wheels meet "
+                "soil and rock rather than root mat"
             )
         else:
-            transfers.insert(
-                0,
-                "NDVI unavailable (no MOD13Q1 coverage) — vegetation similarity "
-                "excluded, not guessed",
+            transfers.append(
+                "Vegetation unknown — MODIS has no coverage here, so the "
+                "screen leaves it out instead of guessing"
             )
+        if dt is not None:
+            transfers.append(
+                f"{dt:.0f} K day–night air swing (NASA POWER) for "
+                "thermal-cycling practice"
+            )
+        else:
+            transfers.append("Air-temperature swing still unknown for this cell")
         if slope is not None:
             transfers.append(
-                "Slope stats at shared 20 m baseline suitable for traverse rehearsal"
+                "Slope stats at the shared 20 m baseline for traverse rehearsal"
             )
         else:
             transfers.append(
-                "Slope pending — same 20 m DEM baseline as Jezero USGS + lunar LOLA "
-                "(compute_slopes_20m.py)"
+                "Slope still unknown — it will use the same 20 m baseline as "
+                "Jezero and the lunar poles"
             )
 
         cards.append(
@@ -159,23 +193,27 @@ def build_candidates(
                 "lon": cell["lon"],
                 "targetIds": [target_id],
                 "useCaseId": use_case["id"],
+                "rank": r["rank"],
+                "composite": r["composite"],
+                "headline": story["headline"],
+                "story": story["story"],
                 "transfers": transfers,
                 "breaks": [
-                    "Earth gravity and atmosphere do not transfer",
-                    "Illumination / radiation environment is not planetary",
-                    "Mineralogy zero-weighted until a citable site value exists",
-                    "Do not treat POWER air ΔT as MODIS land-surface ΔT",
+                    "Earth's gravity and thick atmosphere do not transfer",
+                    "Light and radiation are planetary, not terrestrial",
+                    "Mineralogy is blank until a citable site value exists",
+                    "Air temperature here is not the same as ground temperature",
                 ],
                 "tests": [
-                    "Instrument thermal soak / diurnal cycle checkout (air-side matched)",
-                    "Wheel–soil interaction once 20 m slopes are filled",
-                    "Ops rehearsal: timed rover shift under thermal stress",
+                    "Run a full thermal soak through a site day–night cycle",
+                    "Drive a wheel–soil test once 20 m slopes are filled",
+                    "Rehearse a timed rover shift under thermal stress",
                 ],
                 "scaleNotes": (
-                    f"Coarse cell ~{cell['cellDeg']}°. "
-                    "NDVI: MODIS MOD13Q1 250 m annual mean in a ~2 km box. "
-                    "Slopes: null until LOLA / USGS Jezero / Earth DEM at 20 m baseline. "
-                    "Thermal: NASA POWER T2M air climatology."
+                    f"Screen cell ~{cell['cellDeg']}°. "
+                    "Vegetation: MODIS 250 m point sample. "
+                    "Slopes: pending shared 20 m baseline. "
+                    "Temperature: air, NASA POWER."
                 ),
                 "fingerprint": r["dimensions"],
                 "gaps": default_gaps(for_moon=for_moon),
@@ -363,6 +401,16 @@ def main() -> None:
         "validation": validations,
     }
 
+    manifest = build_manifest(
+        cells=cells,
+        targets=targets,
+        known_analogs=known,
+        validation=validations,
+        candidates=candidates,
+        ndvi_year=args.ndvi_year,
+        ndvi_box_km=1,
+    )
+
     WEB_DATA.mkdir(parents=True, exist_ok=True)
     (WEB_DATA / "coarse_results.json").write_text(
         json.dumps(coarse, indent=2), encoding="utf-8"
@@ -373,10 +421,14 @@ def main() -> None:
     (WEB_DATA / "method.json").write_text(
         json.dumps(method_doc(), indent=2), encoding="utf-8"
     )
+    (WEB_DATA / "manifest.json").write_text(
+        json.dumps(manifest, indent=2), encoding="utf-8"
+    )
 
     print(f"Wrote {WEB_DATA / 'coarse_results.json'}")
     print(f"Wrote {WEB_DATA / 'candidates.json'} ({len(candidates)} cards)")
     print(f"Wrote {WEB_DATA / 'method.json'}")
+    print(f"Wrote {WEB_DATA / 'manifest.json'} (v{manifest['pipelineVersion']})")
     for v in validations:
         print(
             f"  validation {v['targetId']}: passed={v['passed']} "

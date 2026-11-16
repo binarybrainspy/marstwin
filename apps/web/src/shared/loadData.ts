@@ -2,6 +2,7 @@ import type {
   AnalogyCard,
   CoarseBundle,
   KnownAnalog,
+  Manifest,
   MethodDoc,
   TargetProfile,
   UseCase,
@@ -14,7 +15,7 @@ async function getJson<T>(path: string): Promise<T> {
 }
 
 export async function loadAll() {
-  const [usecases, targets, knownAnalogs, coarse, candidates, method] =
+  const [usecases, targets, knownAnalogs, coarse, candidates, method, manifest] =
     await Promise.all([
       getJson<UseCase[]>('/data/usecases.json'),
       getJson<TargetProfile[]>('/data/targets.json'),
@@ -22,6 +23,7 @@ export async function loadAll() {
       getJson<CoarseBundle>('/data/coarse_results.json'),
       getJson<AnalogyCard[]>('/data/candidates.json'),
       getJson<MethodDoc>('/data/method.json'),
+      getJson<Manifest>('/data/manifest.json'),
     ])
 
   return {
@@ -31,6 +33,7 @@ export async function loadAll() {
     coarse,
     candidates,
     method,
+    manifest,
   }
 }
 

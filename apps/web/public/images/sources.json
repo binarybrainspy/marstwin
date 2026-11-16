@@ -1,0 +1,14 @@
+{
+  "attribution": "Esri, Maxar, Earthstar Geographics",
+  "provider": "Esri World Imagery",
+  "note": "Satellite context imagery; not used in the numerical score.",
+  "sites": {
+    "cell_namib": {
+      "file": "/images/sites/cell_namib.jpg",
+      "lat": -24.0,
+      "lon": 15.0,
+      "boxKm": 36.0
+    }
+  },
+  "world": "/images/world.jpg"
+}
