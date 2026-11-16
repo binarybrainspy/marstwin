@@ -9,3 +9,7 @@ venv/
 *.log
 .vite/
 science/cache/
+docs/
+REPORT_README.md
+nasa_space_apps_analog_strategy.md
+apps/web/README.md
